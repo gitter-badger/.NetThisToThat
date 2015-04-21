@@ -6,7 +6,6 @@ namespace ThisToThat
 {
     public static class ToDecimalExtensions
     {
-
         /* 
         SByte to Decimal: Method omitted
         There is a predefined implicit conversion from SByte to Decimal
@@ -48,7 +47,43 @@ namespace ThisToThat
         */
 
         /// <summary>
-        /// Converts this Single to Decimal
+        /// Converts this Single to Decimal or returns the Decimal default value
+        /// </summary>
+        /// <returns>This Single converted to Decimal</returns>
+        /// <remarks>
+        /// Source type: Single
+        /// Min value: -3.40282346638529E+38
+        /// Max value: 3.40282346638529E+38
+        ///
+        /// Target type: Decimal
+        /// Min value: -7.92281625142643E+28
+        /// Max value: 7.92281625142643E+28
+        /// </remarks>
+        public static Decimal? ToDecimal(this Single thisSingle)
+        {
+            return thisSingle.ToDecimalNullable().GetValueOrDefault();
+        }
+
+        /// <summary>
+        /// Converts this Single to Decimal or returns the specified default value
+        /// </summary>
+        /// <returns>This Single converted to Decimal</returns>
+        /// <remarks>
+        /// Source type: Single
+        /// Min value: -3.40282346638529E+38
+        /// Max value: 3.40282346638529E+38
+        ///
+        /// Target type: Decimal
+        /// Min value: -7.92281625142643E+28
+        /// Max value: 7.92281625142643E+28
+        /// </remarks>
+        public static Decimal? ToDecimalOrDefault(this Single thisSingle, Decimal defaultValue = default(Decimal))
+        {
+            return thisSingle.ToDecimalNullable().GetValueOrDefault(defaultValue);
+        }
+
+        /// <summary>
+        /// Converts this Single to Decimal?
         /// </summary>
         /// <returns>This Single converted to Decimal</returns>
         /// <remarks>
@@ -66,7 +101,43 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this Double to Decimal
+        /// Converts this Double to Decimal or returns the Decimal default value
+        /// </summary>
+        /// <returns>This Double converted to Decimal</returns>
+        /// <remarks>
+        /// Source type: Double
+        /// Min value: -1.79769313486232E+308
+        /// Max value: 1.79769313486232E+308
+        ///
+        /// Target type: Decimal
+        /// Min value: -7.92281625142643E+28
+        /// Max value: 7.92281625142643E+28
+        /// </remarks>
+        public static Decimal? ToDecimal(this Double thisDouble)
+        {
+            return thisDouble.ToDecimalNullable().GetValueOrDefault();
+        }
+
+        /// <summary>
+        /// Converts this Double to Decimal or returns the specified default value
+        /// </summary>
+        /// <returns>This Double converted to Decimal</returns>
+        /// <remarks>
+        /// Source type: Double
+        /// Min value: -1.79769313486232E+308
+        /// Max value: 1.79769313486232E+308
+        ///
+        /// Target type: Decimal
+        /// Min value: -7.92281625142643E+28
+        /// Max value: 7.92281625142643E+28
+        /// </remarks>
+        public static Decimal? ToDecimalOrDefault(this Double thisDouble, Decimal defaultValue = default(Decimal))
+        {
+            return thisDouble.ToDecimalNullable().GetValueOrDefault(defaultValue);
+        }
+
+        /// <summary>
+        /// Converts this Double to Decimal?
         /// </summary>
         /// <returns>This Double converted to Decimal</returns>
         /// <remarks>

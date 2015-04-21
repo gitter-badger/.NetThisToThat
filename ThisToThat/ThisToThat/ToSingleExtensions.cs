@@ -6,6 +6,8 @@ namespace ThisToThat
 {
     public static class ToSingleExtensions
     {
+
+
         /* 
         SByte to Single: Method omitted
         There is a predefined implicit conversion from SByte to Single
@@ -47,7 +49,43 @@ namespace ThisToThat
         */
 
         /// <summary>
-        /// Converts this Double to Single
+        /// Converts this Double to Single or returns the Single default value
+        /// </summary>
+        /// <returns>This Double converted to Single</returns>
+        /// <remarks>
+        /// Source type: Double
+        /// Min value: -1.79769313486232E+308
+        /// Max value: 1.79769313486232E+308
+        ///
+        /// Target type: Single
+        /// Min value: -3.40282346638529E+38
+        /// Max value: 3.40282346638529E+38
+        /// </remarks>
+        public static Single? ToSingle(this Double thisDouble)
+        {
+            return thisDouble.ToSingleNullable().GetValueOrDefault();
+        }
+
+        /// <summary>
+        /// Converts this Double to Single or returns the specified default value
+        /// </summary>
+        /// <returns>This Double converted to Single</returns>
+        /// <remarks>
+        /// Source type: Double
+        /// Min value: -1.79769313486232E+308
+        /// Max value: 1.79769313486232E+308
+        ///
+        /// Target type: Single
+        /// Min value: -3.40282346638529E+38
+        /// Max value: 3.40282346638529E+38
+        /// </remarks>
+        public static Single? ToSingleOrDefault(this Double thisDouble, Single defaultValue = default(Single))
+        {
+            return thisDouble.ToSingleNullable().GetValueOrDefault(defaultValue);
+        }
+
+        /// <summary>
+        /// Converts this Double to Single?
         /// </summary>
         /// <returns>This Double converted to Single</returns>
         /// <remarks>
@@ -73,6 +111,7 @@ namespace ThisToThat
         Decimal myDecimal = Decimal.MinValue;
         Single mySingle = (Single)myDecimal;
         */
+
 
     }
 }

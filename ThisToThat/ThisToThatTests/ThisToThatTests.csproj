@@ -53,7 +53,13 @@
     <Compile Include="ToByteTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToDecimalTests.cs" />
+    <Compile Include="ToInt32Tests.cs" />
+    <Compile Include="ToInt64Tests.cs" />
     <Compile Include="ToSByteTests.cs" />
+    <Compile Include="ToDoubleTests.cs" />
+    <Compile Include="ToSingleTests.cs" />
+    <Compile Include="ToUInt32Tests.cs" />
+    <Compile Include="ToUInt64Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ThisToThat\ThisToThat.csproj">
