@@ -8,6 +8,7 @@ namespace ThisToThat
     {
 
 
+
         /// <summary>
         /// Converts this SByte to UInt64 or returns the UInt64 default value
         /// </summary>
@@ -19,7 +20,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64(this SByte thisSByte)
         {
@@ -37,7 +38,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64OrDefault(this SByte thisSByte, UInt64 defaultValue = default(UInt64))
         {
@@ -55,7 +56,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64Nullable(this SByte thisSByte)
         {
@@ -78,7 +79,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64(this Int16 thisInt16)
         {
@@ -96,7 +97,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64OrDefault(this Int16 thisInt16, UInt64 defaultValue = default(UInt64))
         {
@@ -114,7 +115,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64Nullable(this Int16 thisInt16)
         {
@@ -137,7 +138,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64(this Int32 thisInt32)
         {
@@ -155,7 +156,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64OrDefault(this Int32 thisInt32, UInt64 defaultValue = default(UInt64))
         {
@@ -173,7 +174,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64Nullable(this Int32 thisInt32)
         {
@@ -191,12 +192,12 @@ namespace ThisToThat
         /// <returns>This Int64 converted to UInt64</returns>
         /// <remarks>
         /// Source type: Int64
-        /// Min value: -9.22337203685478E+18
-        /// Max value: 9.22337203685478E+18
+        /// Min value: -9223372036854775808
+        /// Max value: 9223372036854775807
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64(this Int64 thisInt64)
         {
@@ -209,12 +210,12 @@ namespace ThisToThat
         /// <returns>This Int64 converted to UInt64</returns>
         /// <remarks>
         /// Source type: Int64
-        /// Min value: -9.22337203685478E+18
-        /// Max value: 9.22337203685478E+18
+        /// Min value: -9223372036854775808
+        /// Max value: 9223372036854775807
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64OrDefault(this Int64 thisInt64, UInt64 defaultValue = default(UInt64))
         {
@@ -227,12 +228,12 @@ namespace ThisToThat
         /// <returns>This Int64 converted to UInt64</returns>
         /// <remarks>
         /// Source type: Int64
-        /// Min value: -9.22337203685478E+18
-        /// Max value: 9.22337203685478E+18
+        /// Min value: -9223372036854775808
+        /// Max value: 9223372036854775807
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64Nullable(this Int64 thisInt64)
         {
@@ -245,12 +246,12 @@ namespace ThisToThat
         /// <returns>This Single converted to UInt64</returns>
         /// <remarks>
         /// Source type: Single
-        /// Min value: -3.40282346638529E+38
-        /// Max value: 3.40282346638529E+38
+        /// Min value: -3.402823E+38
+        /// Max value: 3.402823E+38
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64(this Single thisSingle)
         {
@@ -263,12 +264,12 @@ namespace ThisToThat
         /// <returns>This Single converted to UInt64</returns>
         /// <remarks>
         /// Source type: Single
-        /// Min value: -3.40282346638529E+38
-        /// Max value: 3.40282346638529E+38
+        /// Min value: -3.402823E+38
+        /// Max value: 3.402823E+38
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64OrDefault(this Single thisSingle, UInt64 defaultValue = default(UInt64))
         {
@@ -281,16 +282,16 @@ namespace ThisToThat
         /// <returns>This Single converted to UInt64</returns>
         /// <remarks>
         /// Source type: Single
-        /// Min value: -3.40282346638529E+38
-        /// Max value: 3.40282346638529E+38
+        /// Min value: -3.402823E+38
+        /// Max value: 3.402823E+38
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64Nullable(this Single thisSingle)
         {
-            return (thisSingle < 0 || thisSingle > 1.84467440737096E+19) ? (UInt64?)null : (UInt64)thisSingle;
+            return (thisSingle < 0 || thisSingle > 18446744073709551615) ? (UInt64?)null : (UInt64)thisSingle;
         }
 
         /// <summary>
@@ -304,7 +305,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64(this Double thisDouble)
         {
@@ -322,7 +323,7 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64OrDefault(this Double thisDouble, UInt64 defaultValue = default(UInt64))
         {
@@ -340,11 +341,11 @@ namespace ThisToThat
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64Nullable(this Double thisDouble)
         {
-            return (thisDouble < 0 || thisDouble > 1.84467440737096E+19) ? (UInt64?)null : (UInt64)thisDouble;
+            return (thisDouble < 0 || thisDouble > 18446744073709551615) ? (UInt64?)null : (UInt64)thisDouble;
         }
 
         /// <summary>
@@ -353,12 +354,12 @@ namespace ThisToThat
         /// <returns>This Decimal converted to UInt64</returns>
         /// <remarks>
         /// Source type: Decimal
-        /// Min value: -7.92281625142643E+28
-        /// Max value: 7.92281625142643E+28
+        /// Min value: -79228162514264337593543950335
+        /// Max value: 79228162514264337593543950335
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64(this Decimal thisDecimal)
         {
@@ -371,12 +372,12 @@ namespace ThisToThat
         /// <returns>This Decimal converted to UInt64</returns>
         /// <remarks>
         /// Source type: Decimal
-        /// Min value: -7.92281625142643E+28
-        /// Max value: 7.92281625142643E+28
+        /// Min value: -79228162514264337593543950335
+        /// Max value: 79228162514264337593543950335
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64OrDefault(this Decimal thisDecimal, UInt64 defaultValue = default(UInt64))
         {
@@ -389,17 +390,18 @@ namespace ThisToThat
         /// <returns>This Decimal converted to UInt64</returns>
         /// <remarks>
         /// Source type: Decimal
-        /// Min value: -7.92281625142643E+28
-        /// Max value: 7.92281625142643E+28
+        /// Min value: -79228162514264337593543950335
+        /// Max value: 79228162514264337593543950335
         ///
         /// Target type: UInt64
         /// Min value: 0
-        /// Max value: 1.84467440737096E+19
+        /// Max value: 18446744073709551615
         /// </remarks>
         public static UInt64? ToUInt64Nullable(this Decimal thisDecimal)
         {
-            return ((double)thisDecimal < 0 || (double)thisDecimal > 1.84467440737096E+19) ? (UInt64?)null : (UInt64)thisDecimal;
+            return ((double)thisDecimal < 0 || (double)thisDecimal > 18446744073709551615) ? (UInt64?)null : (UInt64)thisDecimal;
         }
+
 
     }
 }

@@ -10,6 +10,7 @@ namespace ThisToThatTests
 
 
 
+
         /// <summary>
         /// Makes multiple SByte to UInt64 or default conversions and asserts that the results are correct.
         /// </summary>
@@ -237,8 +238,7 @@ namespace ThisToThatTests
     source = Int64.MaxValue;
     Assert.IsInstanceOfType(source, typeof(Int64));
     result = source.ToUInt64OrDefault(86UL);
-    ulong target = 96ul;
-    Assert.AreEqual(target, result);
+    Assert.AreEqual(9.22337203685478E+18, result);
     Assert.IsInstanceOfType(result, typeof(UInt64));
 }
 
@@ -268,7 +268,7 @@ namespace ThisToThatTests
     source = Int64.MaxValue;
     Assert.IsInstanceOfType(source, typeof(Int64));
     result = source.ToUInt64Nullable();
-    Assert.AreEqual(9.22337203685478E+18UL, result);
+    Assert.AreEqual(9.22337203685478E+18, result);
     Assert.IsInstanceOfType(result, typeof(UInt64));
 
 }
@@ -470,6 +470,7 @@ namespace ThisToThatTests
             Assert.IsNull(result);
 
         }
+
 
     }
 }
