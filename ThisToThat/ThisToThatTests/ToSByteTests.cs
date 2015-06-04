@@ -339,7 +339,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Int64));
             SByte? result = source.ToSByteOrDefault((sbyte)86);
             // Here we would expect this conversion to fail (and return the default value of (sbyte)86), 
-            // since the source type's minimum value (-9.22337203685478E+18) is less than the target type's minimum value (-128).
+            // since the source type's minimum value (-9223372036854775808) is less than the target type's minimum value (-128).
             Assert.AreEqual((sbyte)86, result);
             Assert.IsInstanceOfType(result, typeof(SByte));
 
@@ -355,7 +355,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Int64));
             result = source.ToSByteOrDefault((sbyte)86);
             // Here we would expect this conversion to fail (and return the default value of (sbyte)86), 
-            // since the source type's maximum value (9.22337203685478E+18) is greater than the target type's maximum value (127).
+            // since the source type's maximum value (9223372036854775807) is greater than the target type's maximum value (127).
             Assert.AreEqual((sbyte)86, result);
             Assert.IsInstanceOfType(result, typeof(SByte));
 
@@ -373,7 +373,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Int64));
             SByte? result = source.ToSByteNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's minimum value (-9.22337203685478E+18) is less than the target type's minimum value (-128).
+            // since the source type's minimum value (-9223372036854775808) is less than the target type's minimum value (-128).
             Assert.IsNull(result);
 
             // Test conversion of source type value 42 to target type
@@ -388,7 +388,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Int64));
             result = source.ToSByteNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's maximum value (9.22337203685478E+18) is greater than the target type's maximum value (127).
+            // since the source type's maximum value (9223372036854775807) is greater than the target type's maximum value (127).
             Assert.IsNull(result);
 
         }
@@ -418,7 +418,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(UInt64));
             result = source.ToSByteOrDefault((sbyte)86);
             // Here we would expect this conversion to fail (and return the default value of (sbyte)86), 
-            // since the source type's maximum value (1.84467440737096E+19) is greater than the target type's maximum value (127).
+            // since the source type's maximum value (18446744073709551615) is greater than the target type's maximum value (127).
             Assert.AreEqual((sbyte)86, result);
             Assert.IsInstanceOfType(result, typeof(SByte));
 
@@ -450,7 +450,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(UInt64));
             result = source.ToSByteNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's maximum value (1.84467440737096E+19) is greater than the target type's maximum value (127).
+            // since the source type's maximum value (18446744073709551615) is greater than the target type's maximum value (127).
             Assert.IsNull(result);
 
         }
@@ -467,7 +467,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Single));
             SByte? result = source.ToSByteOrDefault((sbyte)86);
             // Here we would expect this conversion to fail (and return the default value of (sbyte)86), 
-            // since the source type's minimum value (-3.40282346638529E+38) is less than the target type's minimum value (-128).
+            // since the source type's minimum value (-3.402823E+38) is less than the target type's minimum value (-128).
             Assert.AreEqual((sbyte)86, result);
             Assert.IsInstanceOfType(result, typeof(SByte));
 
@@ -483,7 +483,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Single));
             result = source.ToSByteOrDefault((sbyte)86);
             // Here we would expect this conversion to fail (and return the default value of (sbyte)86), 
-            // since the source type's maximum value (3.40282346638529E+38) is greater than the target type's maximum value (127).
+            // since the source type's maximum value (3.402823E+38) is greater than the target type's maximum value (127).
             Assert.AreEqual((sbyte)86, result);
             Assert.IsInstanceOfType(result, typeof(SByte));
 
@@ -501,7 +501,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Single));
             SByte? result = source.ToSByteNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's minimum value (-3.40282346638529E+38) is less than the target type's minimum value (-128).
+            // since the source type's minimum value (-3.402823E+38) is less than the target type's minimum value (-128).
             Assert.IsNull(result);
 
             // Test conversion of source type value 42 to target type
@@ -516,7 +516,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Single));
             result = source.ToSByteNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's maximum value (3.40282346638529E+38) is greater than the target type's maximum value (127).
+            // since the source type's maximum value (3.402823E+38) is greater than the target type's maximum value (127).
             Assert.IsNull(result);
 
         }
@@ -599,7 +599,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Decimal));
             SByte? result = source.ToSByteOrDefault((sbyte)86);
             // Here we would expect this conversion to fail (and return the default value of (sbyte)86), 
-            // since the source type's minimum value (-7.92281625142643E+28) is less than the target type's minimum value (-128).
+            // since the source type's minimum value (-79228162514264337593543950335) is less than the target type's minimum value (-128).
             Assert.AreEqual((sbyte)86, result);
             Assert.IsInstanceOfType(result, typeof(SByte));
 
@@ -615,7 +615,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Decimal));
             result = source.ToSByteOrDefault((sbyte)86);
             // Here we would expect this conversion to fail (and return the default value of (sbyte)86), 
-            // since the source type's maximum value (7.92281625142643E+28) is greater than the target type's maximum value (127).
+            // since the source type's maximum value (79228162514264337593543950335) is greater than the target type's maximum value (127).
             Assert.AreEqual((sbyte)86, result);
             Assert.IsInstanceOfType(result, typeof(SByte));
 
@@ -633,7 +633,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Decimal));
             SByte? result = source.ToSByteNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's minimum value (-7.92281625142643E+28) is less than the target type's minimum value (-128).
+            // since the source type's minimum value (-79228162514264337593543950335) is less than the target type's minimum value (-128).
             Assert.IsNull(result);
 
             // Test conversion of source type value 42 to target type
@@ -648,10 +648,11 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Decimal));
             result = source.ToSByteNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's maximum value (7.92281625142643E+28) is greater than the target type's maximum value (127).
+            // since the source type's maximum value (79228162514264337593543950335) is greater than the target type's maximum value (127).
             Assert.IsNull(result);
 
         }
+
 
     }
 }
