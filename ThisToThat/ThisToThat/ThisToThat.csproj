@@ -43,27 +43,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToBooleanExtensions.cs" />
-    <Compile Include="ToByteExtensions.cs" />
     <Compile Include="ToByteNumericConversionExtensions.cs" />
-    <Compile Include="ToDecimalExtensions.cs" />
     <Compile Include="ToDecimalNumericConversionExtensions.cs" />
     <Compile Include="ToDoubleExtensions.cs" />
-    <Compile Include="ToDoubleNumericConversionExtensions.cs" />
-    <Compile Include="ToInt16Extensions.cs" />
     <Compile Include="ToInt16NumericConversionExtensions.cs" />
-    <Compile Include="ToInt32Extensions.cs" />
     <Compile Include="ToInt32NumericConversionExtensions.cs" />
-    <Compile Include="ToInt64Extensions.cs" />
     <Compile Include="ToInt64NumericConversionExtensions.cs" />
-    <Compile Include="ToSByteExtensions.cs" />
     <Compile Include="ToSByteNumericConversionExtensions.cs" />
-    <Compile Include="ToSingleExtensions.cs" />
     <Compile Include="ToSingleNumericConversionExtensions.cs" />
-    <Compile Include="ToUInt16Extensions.cs" />
     <Compile Include="ToUInt16NumericConversionExtensions.cs" />
-    <Compile Include="ToUInt32Extensions.cs" />
     <Compile Include="ToUInt32NumericConversionExtensions.cs" />
-    <Compile Include="ToUInt64Extensions.cs" />
     <Compile Include="ToUInt64NumericConversionExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
