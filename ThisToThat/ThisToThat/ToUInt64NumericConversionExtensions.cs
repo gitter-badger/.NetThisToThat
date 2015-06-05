@@ -119,7 +119,7 @@ namespace ThisToThat
         /// </remarks>
         public static UInt64? ToUInt64Nullable(this Int16 thisInt16)
         {
-            return (thisInt16 < 0) ? (UInt64?)null : (UInt64)thisInt16;
+            return (thisInt16 < (short)0) ? (UInt64?)null : (UInt64)thisInt16;
         }
 
         /* 
@@ -240,167 +240,23 @@ namespace ThisToThat
             return (thisInt64 < 0L) ? (UInt64?)null : (UInt64)thisInt64;
         }
 
-        /// <summary>
-        /// Converts this Single to UInt64 or returns the UInt64 default value
-        /// </summary>
-        /// <returns>This Single converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64(this Single thisSingle)
-        {
-            return thisSingle.ToUInt64Nullable().GetValueOrDefault();
-        }
+        /* 
+        Single to UInt64: Method omitted.
+        UInt64 is an integral type. Single is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to UInt64 or returns the specified default value
-        /// </summary>
-        /// <returns>This Single converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64OrDefault(this Single thisSingle, UInt64 defaultValue = default(UInt64))
-        {
-            return thisSingle.ToUInt64Nullable().GetValueOrDefault(defaultValue);
-        }
+        /* 
+        Double to UInt64: Method omitted.
+        UInt64 is an integral type. Double is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to UInt64?
-        /// </summary>
-        /// <returns>This Single converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64Nullable(this Single thisSingle)
-        {
-            return (thisSingle < 0f || thisSingle > 18446744073709551615f) ? (UInt64?)null : (UInt64)thisSingle;
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt64 or returns the UInt64 default value
-        /// </summary>
-        /// <returns>This Double converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64(this Double thisDouble)
-        {
-            return thisDouble.ToUInt64Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt64 or returns the specified default value
-        /// </summary>
-        /// <returns>This Double converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64OrDefault(this Double thisDouble, UInt64 defaultValue = default(UInt64))
-        {
-            return thisDouble.ToUInt64Nullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt64?
-        /// </summary>
-        /// <returns>This Double converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64Nullable(this Double thisDouble)
-        {
-            return (thisDouble < 0d || thisDouble > 18446744073709551615d) ? (UInt64?)null : (UInt64)thisDouble;
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt64 or returns the UInt64 default value
-        /// </summary>
-        /// <returns>This Decimal converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64(this Decimal thisDecimal)
-        {
-            return thisDecimal.ToUInt64Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt64 or returns the specified default value
-        /// </summary>
-        /// <returns>This Decimal converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64OrDefault(this Decimal thisDecimal, UInt64 defaultValue = default(UInt64))
-        {
-            return thisDecimal.ToUInt64Nullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt64?
-        /// </summary>
-        /// <returns>This Decimal converted to UInt64</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        /// </remarks>
-        public static UInt64? ToUInt64Nullable(this Decimal thisDecimal)
-        {
-            return (thisDecimal < 0m || thisDecimal > 18446744073709551615m) ? (UInt64?)null : (UInt64)thisDecimal;
-        }
+        /* 
+        Decimal to UInt64: Method omitted.
+        UInt64 is an integral type. Decimal is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
     }
 }

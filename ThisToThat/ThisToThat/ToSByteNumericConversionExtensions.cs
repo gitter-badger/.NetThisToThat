@@ -114,7 +114,7 @@ namespace ThisToThat
         /// </remarks>
         public static SByte? ToSByteNullable(this Int16 thisInt16)
         {
-            return (thisInt16 < -128 || thisInt16 > 127) ? (SByte?)null : (SByte)thisInt16;
+            return (thisInt16 < (short)-128 || thisInt16 > (short)127) ? (SByte?)null : (SByte)thisInt16;
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace ThisToThat
         /// </remarks>
         public static SByte? ToSByteNullable(this UInt16 thisUInt16)
         {
-            return (thisUInt16 > 127) ? (SByte?)null : (SByte)thisUInt16;
+            return (thisUInt16 > (ushort)127) ? (SByte?)null : (SByte)thisUInt16;
         }
 
         /// <summary>
@@ -387,167 +387,23 @@ namespace ThisToThat
             return (thisUInt64 > 127UL) ? (SByte?)null : (SByte)thisUInt64;
         }
 
-        /// <summary>
-        /// Converts this Single to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This Single converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByte(this Single thisSingle)
-        {
-            return thisSingle.ToSByteNullable().GetValueOrDefault();
-        }
+        /* 
+        Single to SByte: Method omitted.
+        SByte is an integral type. Single is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to SByte or returns the specified default value
-        /// </summary>
-        /// <returns>This Single converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByteOrDefault(this Single thisSingle, SByte defaultValue = default(SByte))
-        {
-            return thisSingle.ToSByteNullable().GetValueOrDefault(defaultValue);
-        }
+        /* 
+        Double to SByte: Method omitted.
+        SByte is an integral type. Double is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to SByte?
-        /// </summary>
-        /// <returns>This Single converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByteNullable(this Single thisSingle)
-        {
-            return (thisSingle < -128f || thisSingle > 127f) ? (SByte?)null : (SByte)thisSingle;
-        }
-
-        /// <summary>
-        /// Converts this Double to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This Double converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByte(this Double thisDouble)
-        {
-            return thisDouble.ToSByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Double to SByte or returns the specified default value
-        /// </summary>
-        /// <returns>This Double converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByteOrDefault(this Double thisDouble, SByte defaultValue = default(SByte))
-        {
-            return thisDouble.ToSByteNullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Double to SByte?
-        /// </summary>
-        /// <returns>This Double converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByteNullable(this Double thisDouble)
-        {
-            return (thisDouble < -128d || thisDouble > 127d) ? (SByte?)null : (SByte)thisDouble;
-        }
-
-        /// <summary>
-        /// Converts this Decimal to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This Decimal converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByte(this Decimal thisDecimal)
-        {
-            return thisDecimal.ToSByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Decimal to SByte or returns the specified default value
-        /// </summary>
-        /// <returns>This Decimal converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByteOrDefault(this Decimal thisDecimal, SByte defaultValue = default(SByte))
-        {
-            return thisDecimal.ToSByteNullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Decimal to SByte?
-        /// </summary>
-        /// <returns>This Decimal converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte? ToSByteNullable(this Decimal thisDecimal)
-        {
-            return (thisDecimal < -128m || thisDecimal > 127m) ? (SByte?)null : (SByte)thisDecimal;
-        }
+        /* 
+        Decimal to SByte: Method omitted.
+        SByte is an integral type. Decimal is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
     }
 }

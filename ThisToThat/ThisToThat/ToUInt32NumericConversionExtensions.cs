@@ -119,7 +119,7 @@ namespace ThisToThat
         /// </remarks>
         public static UInt32? ToUInt32Nullable(this Int16 thisInt16)
         {
-            return (thisInt16 < 0) ? (UInt32?)null : (UInt32)thisInt16;
+            return (thisInt16 < (short)0) ? (UInt32?)null : (UInt32)thisInt16;
         }
 
         /* 
@@ -289,167 +289,23 @@ namespace ThisToThat
             return (thisUInt64 > 4294967295UL) ? (UInt32?)null : (UInt32)thisUInt64;
         }
 
-        /// <summary>
-        /// Converts this Single to UInt32 or returns the UInt32 default value
-        /// </summary>
-        /// <returns>This Single converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32(this Single thisSingle)
-        {
-            return thisSingle.ToUInt32Nullable().GetValueOrDefault();
-        }
+        /* 
+        Single to UInt32: Method omitted.
+        UInt32 is an integral type. Single is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to UInt32 or returns the specified default value
-        /// </summary>
-        /// <returns>This Single converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32OrDefault(this Single thisSingle, UInt32 defaultValue = default(UInt32))
-        {
-            return thisSingle.ToUInt32Nullable().GetValueOrDefault(defaultValue);
-        }
+        /* 
+        Double to UInt32: Method omitted.
+        UInt32 is an integral type. Double is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to UInt32?
-        /// </summary>
-        /// <returns>This Single converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32Nullable(this Single thisSingle)
-        {
-            return (thisSingle < 0f || thisSingle > 4294967295f) ? (UInt32?)null : (UInt32)thisSingle;
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt32 or returns the UInt32 default value
-        /// </summary>
-        /// <returns>This Double converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32(this Double thisDouble)
-        {
-            return thisDouble.ToUInt32Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt32 or returns the specified default value
-        /// </summary>
-        /// <returns>This Double converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32OrDefault(this Double thisDouble, UInt32 defaultValue = default(UInt32))
-        {
-            return thisDouble.ToUInt32Nullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt32?
-        /// </summary>
-        /// <returns>This Double converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32Nullable(this Double thisDouble)
-        {
-            return (thisDouble < 0d || thisDouble > 4294967295d) ? (UInt32?)null : (UInt32)thisDouble;
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt32 or returns the UInt32 default value
-        /// </summary>
-        /// <returns>This Decimal converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32(this Decimal thisDecimal)
-        {
-            return thisDecimal.ToUInt32Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt32 or returns the specified default value
-        /// </summary>
-        /// <returns>This Decimal converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32OrDefault(this Decimal thisDecimal, UInt32 defaultValue = default(UInt32))
-        {
-            return thisDecimal.ToUInt32Nullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt32?
-        /// </summary>
-        /// <returns>This Decimal converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32? ToUInt32Nullable(this Decimal thisDecimal)
-        {
-            return (thisDecimal < 0m || thisDecimal > 4294967295m) ? (UInt32?)null : (UInt32)thisDecimal;
-        }
+        /* 
+        Decimal to UInt32: Method omitted.
+        UInt32 is an integral type. Decimal is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
     }
 }

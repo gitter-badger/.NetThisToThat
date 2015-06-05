@@ -70,7 +70,7 @@ namespace ThisToThat
         /// </remarks>
         public static Int16? ToInt16Nullable(this UInt16 thisUInt16)
         {
-            return (thisUInt16 > 32767) ? (Int16?)null : (Int16)thisUInt16;
+            return (thisUInt16 > (ushort)32767) ? (Int16?)null : (Int16)thisUInt16;
         }
 
         /// <summary>
@@ -289,167 +289,23 @@ namespace ThisToThat
             return (thisUInt64 > 32767UL) ? (Int16?)null : (Int16)thisUInt64;
         }
 
-        /// <summary>
-        /// Converts this Single to Int16 or returns the Int16 default value
-        /// </summary>
-        /// <returns>This Single converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16(this Single thisSingle)
-        {
-            return thisSingle.ToInt16Nullable().GetValueOrDefault();
-        }
+        /* 
+        Single to Int16: Method omitted.
+        Int16 is an integral type. Single is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to Int16 or returns the specified default value
-        /// </summary>
-        /// <returns>This Single converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16OrDefault(this Single thisSingle, Int16 defaultValue = default(Int16))
-        {
-            return thisSingle.ToInt16Nullable().GetValueOrDefault(defaultValue);
-        }
+        /* 
+        Double to Int16: Method omitted.
+        Int16 is an integral type. Double is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to Int16?
-        /// </summary>
-        /// <returns>This Single converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16Nullable(this Single thisSingle)
-        {
-            return (thisSingle < -32768f || thisSingle > 32767f) ? (Int16?)null : (Int16)thisSingle;
-        }
-
-        /// <summary>
-        /// Converts this Double to Int16 or returns the Int16 default value
-        /// </summary>
-        /// <returns>This Double converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16(this Double thisDouble)
-        {
-            return thisDouble.ToInt16Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Double to Int16 or returns the specified default value
-        /// </summary>
-        /// <returns>This Double converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16OrDefault(this Double thisDouble, Int16 defaultValue = default(Int16))
-        {
-            return thisDouble.ToInt16Nullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Double to Int16?
-        /// </summary>
-        /// <returns>This Double converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16Nullable(this Double thisDouble)
-        {
-            return (thisDouble < -32768d || thisDouble > 32767d) ? (Int16?)null : (Int16)thisDouble;
-        }
-
-        /// <summary>
-        /// Converts this Decimal to Int16 or returns the Int16 default value
-        /// </summary>
-        /// <returns>This Decimal converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16(this Decimal thisDecimal)
-        {
-            return thisDecimal.ToInt16Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Decimal to Int16 or returns the specified default value
-        /// </summary>
-        /// <returns>This Decimal converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16OrDefault(this Decimal thisDecimal, Int16 defaultValue = default(Int16))
-        {
-            return thisDecimal.ToInt16Nullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Decimal to Int16?
-        /// </summary>
-        /// <returns>This Decimal converted to Int16</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        /// </remarks>
-        public static Int16? ToInt16Nullable(this Decimal thisDecimal)
-        {
-            return (thisDecimal < -32768m || thisDecimal > 32767m) ? (Int16?)null : (Int16)thisDecimal;
-        }
+        /* 
+        Decimal to Int16: Method omitted.
+        Int16 is an integral type. Decimal is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
     }
 }

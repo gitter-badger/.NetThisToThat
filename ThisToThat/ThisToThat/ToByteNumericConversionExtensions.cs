@@ -114,7 +114,7 @@ namespace ThisToThat
         /// </remarks>
         public static Byte? ToByteNullable(this Int16 thisInt16)
         {
-            return (thisInt16 < 0 || thisInt16 > 255) ? (Byte?)null : (Byte)thisInt16;
+            return (thisInt16 < (short)0 || thisInt16 > (short)255) ? (Byte?)null : (Byte)thisInt16;
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace ThisToThat
         /// </remarks>
         public static Byte? ToByteNullable(this UInt16 thisUInt16)
         {
-            return (thisUInt16 > 255) ? (Byte?)null : (Byte)thisUInt16;
+            return (thisUInt16 > (ushort)255) ? (Byte?)null : (Byte)thisUInt16;
         }
 
         /// <summary>
@@ -387,167 +387,23 @@ namespace ThisToThat
             return (thisUInt64 > 255UL) ? (Byte?)null : (Byte)thisUInt64;
         }
 
-        /// <summary>
-        /// Converts this Single to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This Single converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByte(this Single thisSingle)
-        {
-            return thisSingle.ToByteNullable().GetValueOrDefault();
-        }
+        /* 
+        Single to Byte: Method omitted.
+        Byte is an integral type. Single is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to Byte or returns the specified default value
-        /// </summary>
-        /// <returns>This Single converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByteOrDefault(this Single thisSingle, Byte defaultValue = default(Byte))
-        {
-            return thisSingle.ToByteNullable().GetValueOrDefault(defaultValue);
-        }
+        /* 
+        Double to Byte: Method omitted.
+        Byte is an integral type. Double is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to Byte?
-        /// </summary>
-        /// <returns>This Single converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByteNullable(this Single thisSingle)
-        {
-            return (thisSingle < 0f || thisSingle > 255f) ? (Byte?)null : (Byte)thisSingle;
-        }
-
-        /// <summary>
-        /// Converts this Double to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This Double converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByte(this Double thisDouble)
-        {
-            return thisDouble.ToByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Double to Byte or returns the specified default value
-        /// </summary>
-        /// <returns>This Double converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByteOrDefault(this Double thisDouble, Byte defaultValue = default(Byte))
-        {
-            return thisDouble.ToByteNullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Double to Byte?
-        /// </summary>
-        /// <returns>This Double converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByteNullable(this Double thisDouble)
-        {
-            return (thisDouble < 0d || thisDouble > 255d) ? (Byte?)null : (Byte)thisDouble;
-        }
-
-        /// <summary>
-        /// Converts this Decimal to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This Decimal converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByte(this Decimal thisDecimal)
-        {
-            return thisDecimal.ToByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Decimal to Byte or returns the specified default value
-        /// </summary>
-        /// <returns>This Decimal converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByteOrDefault(this Decimal thisDecimal, Byte defaultValue = default(Byte))
-        {
-            return thisDecimal.ToByteNullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Decimal to Byte?
-        /// </summary>
-        /// <returns>This Decimal converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte? ToByteNullable(this Decimal thisDecimal)
-        {
-            return (thisDecimal < 0m || thisDecimal > 255m) ? (Byte?)null : (Byte)thisDecimal;
-        }
+        /* 
+        Decimal to Byte: Method omitted.
+        Byte is an integral type. Decimal is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
     }
 }

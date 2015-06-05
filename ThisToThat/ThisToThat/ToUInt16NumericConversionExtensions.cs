@@ -119,7 +119,7 @@ namespace ThisToThat
         /// </remarks>
         public static UInt16? ToUInt16Nullable(this Int16 thisInt16)
         {
-            return (thisInt16 < 0) ? (UInt16?)null : (UInt16)thisInt16;
+            return (thisInt16 < (short)0) ? (UInt16?)null : (UInt16)thisInt16;
         }
 
         /// <summary>
@@ -338,167 +338,23 @@ namespace ThisToThat
             return (thisUInt64 > 65535UL) ? (UInt16?)null : (UInt16)thisUInt64;
         }
 
-        /// <summary>
-        /// Converts this Single to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This Single converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16(this Single thisSingle)
-        {
-            return thisSingle.ToUInt16Nullable().GetValueOrDefault();
-        }
+        /* 
+        Single to UInt16: Method omitted.
+        UInt16 is an integral type. Single is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to UInt16 or returns the specified default value
-        /// </summary>
-        /// <returns>This Single converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this Single thisSingle, UInt16 defaultValue = default(UInt16))
-        {
-            return thisSingle.ToUInt16Nullable().GetValueOrDefault(defaultValue);
-        }
+        /* 
+        Double to UInt16: Method omitted.
+        UInt16 is an integral type. Double is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
-        /// <summary>
-        /// Converts this Single to UInt16?
-        /// </summary>
-        /// <returns>This Single converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16Nullable(this Single thisSingle)
-        {
-            return (thisSingle < 0f || thisSingle > 65535f) ? (UInt16?)null : (UInt16)thisSingle;
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This Double converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16(this Double thisDouble)
-        {
-            return thisDouble.ToUInt16Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt16 or returns the specified default value
-        /// </summary>
-        /// <returns>This Double converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this Double thisDouble, UInt16 defaultValue = default(UInt16))
-        {
-            return thisDouble.ToUInt16Nullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Double to UInt16?
-        /// </summary>
-        /// <returns>This Double converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16Nullable(this Double thisDouble)
-        {
-            return (thisDouble < 0d || thisDouble > 65535d) ? (UInt16?)null : (UInt16)thisDouble;
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This Decimal converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16(this Decimal thisDecimal)
-        {
-            return thisDecimal.ToUInt16Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt16 or returns the specified default value
-        /// </summary>
-        /// <returns>This Decimal converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this Decimal thisDecimal, UInt16 defaultValue = default(UInt16))
-        {
-            return thisDecimal.ToUInt16Nullable().GetValueOrDefault(defaultValue);
-        }
-
-        /// <summary>
-        /// Converts this Decimal to UInt16?
-        /// </summary>
-        /// <returns>This Decimal converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16? ToUInt16Nullable(this Decimal thisDecimal)
-        {
-            return (thisDecimal < 0m || thisDecimal > 65535m) ? (UInt16?)null : (UInt16)thisDecimal;
-        }
+        /* 
+        Decimal to UInt16: Method omitted.
+        UInt16 is an integral type. Decimal is non-integral (can contain fractions).
+        Conversions involving possible rounding or truncation are not currently provided by this library.
+        */
 
     }
 }
