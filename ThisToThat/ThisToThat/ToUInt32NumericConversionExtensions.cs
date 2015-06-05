@@ -22,7 +22,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32(this SByte thisSByte)
+        public static UInt32 ToUInt32(this SByte thisSByte)
         {
             return thisSByte.ToUInt32Nullable().GetValueOrDefault();
         }
@@ -40,7 +40,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32OrDefault(this SByte thisSByte, UInt32 defaultValue = default(UInt32))
+        public static UInt32 ToUInt32OrDefault(this SByte thisSByte, UInt32 defaultValue = default(UInt32))
         {
             return thisSByte.ToUInt32Nullable().GetValueOrDefault(defaultValue);
         }
@@ -81,7 +81,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32(this Int16 thisInt16)
+        public static UInt32 ToUInt32(this Int16 thisInt16)
         {
             return thisInt16.ToUInt32Nullable().GetValueOrDefault();
         }
@@ -99,7 +99,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32OrDefault(this Int16 thisInt16, UInt32 defaultValue = default(UInt32))
+        public static UInt32 ToUInt32OrDefault(this Int16 thisInt16, UInt32 defaultValue = default(UInt32))
         {
             return thisInt16.ToUInt32Nullable().GetValueOrDefault(defaultValue);
         }
@@ -140,7 +140,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32(this Int32 thisInt32)
+        public static UInt32 ToUInt32(this Int32 thisInt32)
         {
             return thisInt32.ToUInt32Nullable().GetValueOrDefault();
         }
@@ -158,7 +158,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32OrDefault(this Int32 thisInt32, UInt32 defaultValue = default(UInt32))
+        public static UInt32 ToUInt32OrDefault(this Int32 thisInt32, UInt32 defaultValue = default(UInt32))
         {
             return thisInt32.ToUInt32Nullable().GetValueOrDefault(defaultValue);
         }
@@ -194,7 +194,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32(this Int64 thisInt64)
+        public static UInt32 ToUInt32(this Int64 thisInt64)
         {
             return thisInt64.ToUInt32Nullable().GetValueOrDefault();
         }
@@ -212,7 +212,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32OrDefault(this Int64 thisInt64, UInt32 defaultValue = default(UInt32))
+        public static UInt32 ToUInt32OrDefault(this Int64 thisInt64, UInt32 defaultValue = default(UInt32))
         {
             return thisInt64.ToUInt32Nullable().GetValueOrDefault(defaultValue);
         }
@@ -248,7 +248,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32(this UInt64 thisUInt64)
+        public static UInt32 ToUInt32(this UInt64 thisUInt64)
         {
             return thisUInt64.ToUInt32Nullable().GetValueOrDefault();
         }
@@ -266,7 +266,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 4294967295
         /// </remarks>
-        public static UInt32? ToUInt32OrDefault(this UInt64 thisUInt64, UInt32 defaultValue = default(UInt32))
+        public static UInt32 ToUInt32OrDefault(this UInt64 thisUInt64, UInt32 defaultValue = default(UInt32))
         {
             return thisUInt64.ToUInt32Nullable().GetValueOrDefault(defaultValue);
         }

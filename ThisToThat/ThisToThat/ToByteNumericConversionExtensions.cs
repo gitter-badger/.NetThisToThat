@@ -22,7 +22,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByte(this SByte thisSByte)
+        public static Byte ToByte(this SByte thisSByte)
         {
             return thisSByte.ToByteNullable().GetValueOrDefault();
         }
@@ -40,7 +40,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByteOrDefault(this SByte thisSByte, Byte defaultValue = default(Byte))
+        public static Byte ToByteOrDefault(this SByte thisSByte, Byte defaultValue = default(Byte))
         {
             return thisSByte.ToByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -76,7 +76,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByte(this Int16 thisInt16)
+        public static Byte ToByte(this Int16 thisInt16)
         {
             return thisInt16.ToByteNullable().GetValueOrDefault();
         }
@@ -94,7 +94,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByteOrDefault(this Int16 thisInt16, Byte defaultValue = default(Byte))
+        public static Byte ToByteOrDefault(this Int16 thisInt16, Byte defaultValue = default(Byte))
         {
             return thisInt16.ToByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -130,7 +130,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByte(this UInt16 thisUInt16)
+        public static Byte ToByte(this UInt16 thisUInt16)
         {
             return thisUInt16.ToByteNullable().GetValueOrDefault();
         }
@@ -148,7 +148,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByteOrDefault(this UInt16 thisUInt16, Byte defaultValue = default(Byte))
+        public static Byte ToByteOrDefault(this UInt16 thisUInt16, Byte defaultValue = default(Byte))
         {
             return thisUInt16.ToByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -184,7 +184,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByte(this Int32 thisInt32)
+        public static Byte ToByte(this Int32 thisInt32)
         {
             return thisInt32.ToByteNullable().GetValueOrDefault();
         }
@@ -202,7 +202,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByteOrDefault(this Int32 thisInt32, Byte defaultValue = default(Byte))
+        public static Byte ToByteOrDefault(this Int32 thisInt32, Byte defaultValue = default(Byte))
         {
             return thisInt32.ToByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -238,7 +238,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByte(this UInt32 thisUInt32)
+        public static Byte ToByte(this UInt32 thisUInt32)
         {
             return thisUInt32.ToByteNullable().GetValueOrDefault();
         }
@@ -256,7 +256,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByteOrDefault(this UInt32 thisUInt32, Byte defaultValue = default(Byte))
+        public static Byte ToByteOrDefault(this UInt32 thisUInt32, Byte defaultValue = default(Byte))
         {
             return thisUInt32.ToByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -292,7 +292,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByte(this Int64 thisInt64)
+        public static Byte ToByte(this Int64 thisInt64)
         {
             return thisInt64.ToByteNullable().GetValueOrDefault();
         }
@@ -310,7 +310,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByteOrDefault(this Int64 thisInt64, Byte defaultValue = default(Byte))
+        public static Byte ToByteOrDefault(this Int64 thisInt64, Byte defaultValue = default(Byte))
         {
             return thisInt64.ToByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -346,7 +346,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByte(this UInt64 thisUInt64)
+        public static Byte ToByte(this UInt64 thisUInt64)
         {
             return thisUInt64.ToByteNullable().GetValueOrDefault();
         }
@@ -364,7 +364,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 255
         /// </remarks>
-        public static Byte? ToByteOrDefault(this UInt64 thisUInt64, Byte defaultValue = default(Byte))
+        public static Byte ToByteOrDefault(this UInt64 thisUInt64, Byte defaultValue = default(Byte))
         {
             return thisUInt64.ToByteNullable().GetValueOrDefault(defaultValue);
         }

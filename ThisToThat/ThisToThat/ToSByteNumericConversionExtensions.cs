@@ -22,7 +22,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByte(this Byte thisByte)
+        public static SByte ToSByte(this Byte thisByte)
         {
             return thisByte.ToSByteNullable().GetValueOrDefault();
         }
@@ -40,7 +40,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByteOrDefault(this Byte thisByte, SByte defaultValue = default(SByte))
+        public static SByte ToSByteOrDefault(this Byte thisByte, SByte defaultValue = default(SByte))
         {
             return thisByte.ToSByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -76,7 +76,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByte(this Int16 thisInt16)
+        public static SByte ToSByte(this Int16 thisInt16)
         {
             return thisInt16.ToSByteNullable().GetValueOrDefault();
         }
@@ -94,7 +94,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByteOrDefault(this Int16 thisInt16, SByte defaultValue = default(SByte))
+        public static SByte ToSByteOrDefault(this Int16 thisInt16, SByte defaultValue = default(SByte))
         {
             return thisInt16.ToSByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -130,7 +130,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByte(this UInt16 thisUInt16)
+        public static SByte ToSByte(this UInt16 thisUInt16)
         {
             return thisUInt16.ToSByteNullable().GetValueOrDefault();
         }
@@ -148,7 +148,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByteOrDefault(this UInt16 thisUInt16, SByte defaultValue = default(SByte))
+        public static SByte ToSByteOrDefault(this UInt16 thisUInt16, SByte defaultValue = default(SByte))
         {
             return thisUInt16.ToSByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -184,7 +184,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByte(this Int32 thisInt32)
+        public static SByte ToSByte(this Int32 thisInt32)
         {
             return thisInt32.ToSByteNullable().GetValueOrDefault();
         }
@@ -202,7 +202,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByteOrDefault(this Int32 thisInt32, SByte defaultValue = default(SByte))
+        public static SByte ToSByteOrDefault(this Int32 thisInt32, SByte defaultValue = default(SByte))
         {
             return thisInt32.ToSByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -238,7 +238,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByte(this UInt32 thisUInt32)
+        public static SByte ToSByte(this UInt32 thisUInt32)
         {
             return thisUInt32.ToSByteNullable().GetValueOrDefault();
         }
@@ -256,7 +256,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByteOrDefault(this UInt32 thisUInt32, SByte defaultValue = default(SByte))
+        public static SByte ToSByteOrDefault(this UInt32 thisUInt32, SByte defaultValue = default(SByte))
         {
             return thisUInt32.ToSByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -292,7 +292,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByte(this Int64 thisInt64)
+        public static SByte ToSByte(this Int64 thisInt64)
         {
             return thisInt64.ToSByteNullable().GetValueOrDefault();
         }
@@ -310,7 +310,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByteOrDefault(this Int64 thisInt64, SByte defaultValue = default(SByte))
+        public static SByte ToSByteOrDefault(this Int64 thisInt64, SByte defaultValue = default(SByte))
         {
             return thisInt64.ToSByteNullable().GetValueOrDefault(defaultValue);
         }
@@ -346,7 +346,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByte(this UInt64 thisUInt64)
+        public static SByte ToSByte(this UInt64 thisUInt64)
         {
             return thisUInt64.ToSByteNullable().GetValueOrDefault();
         }
@@ -364,7 +364,7 @@ namespace ThisToThat
         /// Min value: -128
         /// Max value: 127
         /// </remarks>
-        public static SByte? ToSByteOrDefault(this UInt64 thisUInt64, SByte defaultValue = default(SByte))
+        public static SByte ToSByteOrDefault(this UInt64 thisUInt64, SByte defaultValue = default(SByte))
         {
             return thisUInt64.ToSByteNullable().GetValueOrDefault(defaultValue);
         }

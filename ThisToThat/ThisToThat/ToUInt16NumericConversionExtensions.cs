@@ -22,7 +22,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16(this SByte thisSByte)
+        public static UInt16 ToUInt16(this SByte thisSByte)
         {
             return thisSByte.ToUInt16Nullable().GetValueOrDefault();
         }
@@ -40,7 +40,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this SByte thisSByte, UInt16 defaultValue = default(UInt16))
+        public static UInt16 ToUInt16OrDefault(this SByte thisSByte, UInt16 defaultValue = default(UInt16))
         {
             return thisSByte.ToUInt16Nullable().GetValueOrDefault(defaultValue);
         }
@@ -81,7 +81,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16(this Int16 thisInt16)
+        public static UInt16 ToUInt16(this Int16 thisInt16)
         {
             return thisInt16.ToUInt16Nullable().GetValueOrDefault();
         }
@@ -99,7 +99,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this Int16 thisInt16, UInt16 defaultValue = default(UInt16))
+        public static UInt16 ToUInt16OrDefault(this Int16 thisInt16, UInt16 defaultValue = default(UInt16))
         {
             return thisInt16.ToUInt16Nullable().GetValueOrDefault(defaultValue);
         }
@@ -135,7 +135,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16(this Int32 thisInt32)
+        public static UInt16 ToUInt16(this Int32 thisInt32)
         {
             return thisInt32.ToUInt16Nullable().GetValueOrDefault();
         }
@@ -153,7 +153,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this Int32 thisInt32, UInt16 defaultValue = default(UInt16))
+        public static UInt16 ToUInt16OrDefault(this Int32 thisInt32, UInt16 defaultValue = default(UInt16))
         {
             return thisInt32.ToUInt16Nullable().GetValueOrDefault(defaultValue);
         }
@@ -189,7 +189,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16(this UInt32 thisUInt32)
+        public static UInt16 ToUInt16(this UInt32 thisUInt32)
         {
             return thisUInt32.ToUInt16Nullable().GetValueOrDefault();
         }
@@ -207,7 +207,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this UInt32 thisUInt32, UInt16 defaultValue = default(UInt16))
+        public static UInt16 ToUInt16OrDefault(this UInt32 thisUInt32, UInt16 defaultValue = default(UInt16))
         {
             return thisUInt32.ToUInt16Nullable().GetValueOrDefault(defaultValue);
         }
@@ -243,7 +243,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16(this Int64 thisInt64)
+        public static UInt16 ToUInt16(this Int64 thisInt64)
         {
             return thisInt64.ToUInt16Nullable().GetValueOrDefault();
         }
@@ -261,7 +261,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this Int64 thisInt64, UInt16 defaultValue = default(UInt16))
+        public static UInt16 ToUInt16OrDefault(this Int64 thisInt64, UInt16 defaultValue = default(UInt16))
         {
             return thisInt64.ToUInt16Nullable().GetValueOrDefault(defaultValue);
         }
@@ -297,7 +297,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16(this UInt64 thisUInt64)
+        public static UInt16 ToUInt16(this UInt64 thisUInt64)
         {
             return thisUInt64.ToUInt16Nullable().GetValueOrDefault();
         }
@@ -315,7 +315,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 65535
         /// </remarks>
-        public static UInt16? ToUInt16OrDefault(this UInt64 thisUInt64, UInt16 defaultValue = default(UInt16))
+        public static UInt16 ToUInt16OrDefault(this UInt64 thisUInt64, UInt16 defaultValue = default(UInt16))
         {
             return thisUInt64.ToUInt16Nullable().GetValueOrDefault(defaultValue);
         }

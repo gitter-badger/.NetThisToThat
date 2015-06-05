@@ -52,7 +52,7 @@ namespace ThisToThat
         /// Min value: -9223372036854775808
         /// Max value: 9223372036854775807
         /// </remarks>
-        public static Int64? ToInt64(this UInt64 thisUInt64)
+        public static Int64 ToInt64(this UInt64 thisUInt64)
         {
             return thisUInt64.ToInt64Nullable().GetValueOrDefault();
         }
@@ -70,7 +70,7 @@ namespace ThisToThat
         /// Min value: -9223372036854775808
         /// Max value: 9223372036854775807
         /// </remarks>
-        public static Int64? ToInt64OrDefault(this UInt64 thisUInt64, Int64 defaultValue = default(Int64))
+        public static Int64 ToInt64OrDefault(this UInt64 thisUInt64, Int64 defaultValue = default(Int64))
         {
             return thisUInt64.ToInt64Nullable().GetValueOrDefault(defaultValue);
         }

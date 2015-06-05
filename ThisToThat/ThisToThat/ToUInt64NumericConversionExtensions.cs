@@ -22,7 +22,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 18446744073709551615
         /// </remarks>
-        public static UInt64? ToUInt64(this SByte thisSByte)
+        public static UInt64 ToUInt64(this SByte thisSByte)
         {
             return thisSByte.ToUInt64Nullable().GetValueOrDefault();
         }
@@ -40,7 +40,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 18446744073709551615
         /// </remarks>
-        public static UInt64? ToUInt64OrDefault(this SByte thisSByte, UInt64 defaultValue = default(UInt64))
+        public static UInt64 ToUInt64OrDefault(this SByte thisSByte, UInt64 defaultValue = default(UInt64))
         {
             return thisSByte.ToUInt64Nullable().GetValueOrDefault(defaultValue);
         }
@@ -81,7 +81,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 18446744073709551615
         /// </remarks>
-        public static UInt64? ToUInt64(this Int16 thisInt16)
+        public static UInt64 ToUInt64(this Int16 thisInt16)
         {
             return thisInt16.ToUInt64Nullable().GetValueOrDefault();
         }
@@ -99,7 +99,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 18446744073709551615
         /// </remarks>
-        public static UInt64? ToUInt64OrDefault(this Int16 thisInt16, UInt64 defaultValue = default(UInt64))
+        public static UInt64 ToUInt64OrDefault(this Int16 thisInt16, UInt64 defaultValue = default(UInt64))
         {
             return thisInt16.ToUInt64Nullable().GetValueOrDefault(defaultValue);
         }
@@ -140,7 +140,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 18446744073709551615
         /// </remarks>
-        public static UInt64? ToUInt64(this Int32 thisInt32)
+        public static UInt64 ToUInt64(this Int32 thisInt32)
         {
             return thisInt32.ToUInt64Nullable().GetValueOrDefault();
         }
@@ -158,7 +158,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 18446744073709551615
         /// </remarks>
-        public static UInt64? ToUInt64OrDefault(this Int32 thisInt32, UInt64 defaultValue = default(UInt64))
+        public static UInt64 ToUInt64OrDefault(this Int32 thisInt32, UInt64 defaultValue = default(UInt64))
         {
             return thisInt32.ToUInt64Nullable().GetValueOrDefault(defaultValue);
         }
@@ -199,7 +199,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 18446744073709551615
         /// </remarks>
-        public static UInt64? ToUInt64(this Int64 thisInt64)
+        public static UInt64 ToUInt64(this Int64 thisInt64)
         {
             return thisInt64.ToUInt64Nullable().GetValueOrDefault();
         }
@@ -217,7 +217,7 @@ namespace ThisToThat
         /// Min value: 0
         /// Max value: 18446744073709551615
         /// </remarks>
-        public static UInt64? ToUInt64OrDefault(this Int64 thisInt64, UInt64 defaultValue = default(UInt64))
+        public static UInt64 ToUInt64OrDefault(this Int64 thisInt64, UInt64 defaultValue = default(UInt64))
         {
             return thisInt64.ToUInt64Nullable().GetValueOrDefault(defaultValue);
         }

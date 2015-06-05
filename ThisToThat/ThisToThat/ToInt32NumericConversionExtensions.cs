@@ -42,7 +42,7 @@ namespace ThisToThat
         /// Min value: -2147483648
         /// Max value: 2147483647
         /// </remarks>
-        public static Int32? ToInt32(this UInt32 thisUInt32)
+        public static Int32 ToInt32(this UInt32 thisUInt32)
         {
             return thisUInt32.ToInt32Nullable().GetValueOrDefault();
         }
@@ -60,7 +60,7 @@ namespace ThisToThat
         /// Min value: -2147483648
         /// Max value: 2147483647
         /// </remarks>
-        public static Int32? ToInt32OrDefault(this UInt32 thisUInt32, Int32 defaultValue = default(Int32))
+        public static Int32 ToInt32OrDefault(this UInt32 thisUInt32, Int32 defaultValue = default(Int32))
         {
             return thisUInt32.ToInt32Nullable().GetValueOrDefault(defaultValue);
         }
@@ -96,7 +96,7 @@ namespace ThisToThat
         /// Min value: -2147483648
         /// Max value: 2147483647
         /// </remarks>
-        public static Int32? ToInt32(this Int64 thisInt64)
+        public static Int32 ToInt32(this Int64 thisInt64)
         {
             return thisInt64.ToInt32Nullable().GetValueOrDefault();
         }
@@ -114,7 +114,7 @@ namespace ThisToThat
         /// Min value: -2147483648
         /// Max value: 2147483647
         /// </remarks>
-        public static Int32? ToInt32OrDefault(this Int64 thisInt64, Int32 defaultValue = default(Int32))
+        public static Int32 ToInt32OrDefault(this Int64 thisInt64, Int32 defaultValue = default(Int32))
         {
             return thisInt64.ToInt32Nullable().GetValueOrDefault(defaultValue);
         }
@@ -150,7 +150,7 @@ namespace ThisToThat
         /// Min value: -2147483648
         /// Max value: 2147483647
         /// </remarks>
-        public static Int32? ToInt32(this UInt64 thisUInt64)
+        public static Int32 ToInt32(this UInt64 thisUInt64)
         {
             return thisUInt64.ToInt32Nullable().GetValueOrDefault();
         }
@@ -168,7 +168,7 @@ namespace ThisToThat
         /// Min value: -2147483648
         /// Max value: 2147483647
         /// </remarks>
-        public static Int32? ToInt32OrDefault(this UInt64 thisUInt64, Int32 defaultValue = default(Int32))
+        public static Int32 ToInt32OrDefault(this UInt64 thisUInt64, Int32 defaultValue = default(Int32))
         {
             return thisUInt64.ToInt32Nullable().GetValueOrDefault(defaultValue);
         }

@@ -62,7 +62,7 @@ namespace ThisToThat
         /// Min value: -79228162514264337593543950335
         /// Max value: 79228162514264337593543950335
         /// </remarks>
-        public static Decimal? ToDecimal(this Single thisSingle)
+        public static Decimal ToDecimal(this Single thisSingle)
         {
             return thisSingle.ToDecimalNullable().GetValueOrDefault();
         }
@@ -80,7 +80,7 @@ namespace ThisToThat
         /// Min value: -79228162514264337593543950335
         /// Max value: 79228162514264337593543950335
         /// </remarks>
-        public static Decimal? ToDecimalOrDefault(this Single thisSingle, Decimal defaultValue = default(Decimal))
+        public static Decimal ToDecimalOrDefault(this Single thisSingle, Decimal defaultValue = default(Decimal))
         {
             return thisSingle.ToDecimalNullable().GetValueOrDefault(defaultValue);
         }
@@ -116,7 +116,7 @@ namespace ThisToThat
         /// Min value: -79228162514264337593543950335
         /// Max value: 79228162514264337593543950335
         /// </remarks>
-        public static Decimal? ToDecimal(this Double thisDouble)
+        public static Decimal ToDecimal(this Double thisDouble)
         {
             return thisDouble.ToDecimalNullable().GetValueOrDefault();
         }
@@ -134,7 +134,7 @@ namespace ThisToThat
         /// Min value: -79228162514264337593543950335
         /// Max value: 79228162514264337593543950335
         /// </remarks>
-        public static Decimal? ToDecimalOrDefault(this Double thisDouble, Decimal defaultValue = default(Decimal))
+        public static Decimal ToDecimalOrDefault(this Double thisDouble, Decimal defaultValue = default(Decimal))
         {
             return thisDouble.ToDecimalNullable().GetValueOrDefault(defaultValue);
         }

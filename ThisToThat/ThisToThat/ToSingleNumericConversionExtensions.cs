@@ -62,7 +62,7 @@ namespace ThisToThat
         /// Min value: -3.402823E+38
         /// Max value: 3.402823E+38
         /// </remarks>
-        public static Single? ToSingle(this Double thisDouble)
+        public static Single ToSingle(this Double thisDouble)
         {
             return thisDouble.ToSingleNullable().GetValueOrDefault();
         }
@@ -80,7 +80,7 @@ namespace ThisToThat
         /// Min value: -3.402823E+38
         /// Max value: 3.402823E+38
         /// </remarks>
-        public static Single? ToSingleOrDefault(this Double thisDouble, Single defaultValue = default(Single))
+        public static Single ToSingleOrDefault(this Double thisDouble, Single defaultValue = default(Single))
         {
             return thisDouble.ToSingleNullable().GetValueOrDefault(defaultValue);
         }
