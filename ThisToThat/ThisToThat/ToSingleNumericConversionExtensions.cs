@@ -9,45 +9,45 @@ namespace ThisToThat
     {
 
 
-/* 
-SByte to Single: Method omitted
-There is a predefined implicit conversion from SByte to Single
-*/
+        /* 
+        SByte to Single: Method omitted
+        There is a predefined implicit conversion from SByte to Single
+        */
 
-/* 
-Byte to Single: Method omitted
-There is a predefined implicit conversion from Byte to Single
-*/
+        /* 
+        Byte to Single: Method omitted
+        There is a predefined implicit conversion from Byte to Single
+        */
 
-/* 
-Int16 to Single: Method omitted
-There is a predefined implicit conversion from Int16 to Single
-*/
+        /* 
+        Int16 to Single: Method omitted
+        There is a predefined implicit conversion from Int16 to Single
+        */
 
-/* 
-UInt16 to Single: Method omitted
-There is a predefined implicit conversion from UInt16 to Single
-*/
+        /* 
+        UInt16 to Single: Method omitted
+        There is a predefined implicit conversion from UInt16 to Single
+        */
 
-/* 
-Int32 to Single: Method omitted
-There is a predefined implicit conversion from Int32 to Single
-*/
+        /* 
+        Int32 to Single: Method omitted
+        There is a predefined implicit conversion from Int32 to Single
+        */
 
-/* 
-UInt32 to Single: Method omitted
-There is a predefined implicit conversion from UInt32 to Single
-*/
+        /* 
+        UInt32 to Single: Method omitted
+        There is a predefined implicit conversion from UInt32 to Single
+        */
 
-/* 
-Int64 to Single: Method omitted
-There is a predefined implicit conversion from Int64 to Single
-*/
+        /* 
+        Int64 to Single: Method omitted
+        There is a predefined implicit conversion from Int64 to Single
+        */
 
-/* 
-UInt64 to Single: Method omitted
-There is a predefined implicit conversion from UInt64 to Single
-*/
+        /* 
+        UInt64 to Single: Method omitted
+        There is a predefined implicit conversion from UInt64 to Single
+        */
 
         /// <summary>
         /// Converts this Double to Single or returns the Single default value

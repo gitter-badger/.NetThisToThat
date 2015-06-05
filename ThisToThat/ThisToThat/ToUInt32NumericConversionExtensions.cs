@@ -63,10 +63,10 @@ namespace ThisToThat
             return (thisSByte < (sbyte)0) ? (UInt32?)null : (UInt32)thisSByte;
         }
 
-/* 
-Byte to UInt32: Method omitted
-There is a predefined implicit conversion from Byte to UInt32
-*/
+        /* 
+        Byte to UInt32: Method omitted
+        There is a predefined implicit conversion from Byte to UInt32
+        */
 
         /// <summary>
         /// Converts this Int16 to UInt32 or returns the UInt32 default value
@@ -122,10 +122,10 @@ There is a predefined implicit conversion from Byte to UInt32
             return (thisInt16 < 0) ? (UInt32?)null : (UInt32)thisInt16;
         }
 
-/* 
-UInt16 to UInt32: Method omitted
-There is a predefined implicit conversion from UInt16 to UInt32
-*/
+        /* 
+        UInt16 to UInt32: Method omitted
+        There is a predefined implicit conversion from UInt16 to UInt32
+        */
 
         /// <summary>
         /// Converts this Int32 to UInt32 or returns the UInt32 default value

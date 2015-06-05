@@ -9,15 +9,15 @@ namespace ThisToThat
     {
 
 
-/* 
-SByte to Int16: Method omitted
-There is a predefined implicit conversion from SByte to Int16
-*/
+        /* 
+        SByte to Int16: Method omitted
+        There is a predefined implicit conversion from SByte to Int16
+        */
 
-/* 
-Byte to Int16: Method omitted
-There is a predefined implicit conversion from Byte to Int16
-*/
+        /* 
+        Byte to Int16: Method omitted
+        There is a predefined implicit conversion from Byte to Int16
+        */
 
         /// <summary>
         /// Converts this UInt16 to Int16 or returns the Int16 default value

@@ -9,45 +9,45 @@ namespace ThisToThat
     {
 
 
-/* 
-SByte to Decimal: Method omitted
-There is a predefined implicit conversion from SByte to Decimal
-*/
+        /* 
+        SByte to Decimal: Method omitted
+        There is a predefined implicit conversion from SByte to Decimal
+        */
 
-/* 
-Byte to Decimal: Method omitted
-There is a predefined implicit conversion from Byte to Decimal
-*/
+        /* 
+        Byte to Decimal: Method omitted
+        There is a predefined implicit conversion from Byte to Decimal
+        */
 
-/* 
-Int16 to Decimal: Method omitted
-There is a predefined implicit conversion from Int16 to Decimal
-*/
+        /* 
+        Int16 to Decimal: Method omitted
+        There is a predefined implicit conversion from Int16 to Decimal
+        */
 
-/* 
-UInt16 to Decimal: Method omitted
-There is a predefined implicit conversion from UInt16 to Decimal
-*/
+        /* 
+        UInt16 to Decimal: Method omitted
+        There is a predefined implicit conversion from UInt16 to Decimal
+        */
 
-/* 
-Int32 to Decimal: Method omitted
-There is a predefined implicit conversion from Int32 to Decimal
-*/
+        /* 
+        Int32 to Decimal: Method omitted
+        There is a predefined implicit conversion from Int32 to Decimal
+        */
 
-/* 
-UInt32 to Decimal: Method omitted
-There is a predefined implicit conversion from UInt32 to Decimal
-*/
+        /* 
+        UInt32 to Decimal: Method omitted
+        There is a predefined implicit conversion from UInt32 to Decimal
+        */
 
-/* 
-Int64 to Decimal: Method omitted
-There is a predefined implicit conversion from Int64 to Decimal
-*/
+        /* 
+        Int64 to Decimal: Method omitted
+        There is a predefined implicit conversion from Int64 to Decimal
+        */
 
-/* 
-UInt64 to Decimal: Method omitted
-There is a predefined implicit conversion from UInt64 to Decimal
-*/
+        /* 
+        UInt64 to Decimal: Method omitted
+        There is a predefined implicit conversion from UInt64 to Decimal
+        */
 
         /// <summary>
         /// Converts this Single to Decimal or returns the Decimal default value

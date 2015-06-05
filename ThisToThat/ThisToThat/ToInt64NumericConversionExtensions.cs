@@ -9,35 +9,35 @@ namespace ThisToThat
     {
 
 
-/* 
-SByte to Int64: Method omitted
-There is a predefined implicit conversion from SByte to Int64
-*/
+        /* 
+        SByte to Int64: Method omitted
+        There is a predefined implicit conversion from SByte to Int64
+        */
 
-/* 
-Byte to Int64: Method omitted
-There is a predefined implicit conversion from Byte to Int64
-*/
+        /* 
+        Byte to Int64: Method omitted
+        There is a predefined implicit conversion from Byte to Int64
+        */
 
-/* 
-Int16 to Int64: Method omitted
-There is a predefined implicit conversion from Int16 to Int64
-*/
+        /* 
+        Int16 to Int64: Method omitted
+        There is a predefined implicit conversion from Int16 to Int64
+        */
 
-/* 
-UInt16 to Int64: Method omitted
-There is a predefined implicit conversion from UInt16 to Int64
-*/
+        /* 
+        UInt16 to Int64: Method omitted
+        There is a predefined implicit conversion from UInt16 to Int64
+        */
 
-/* 
-Int32 to Int64: Method omitted
-There is a predefined implicit conversion from Int32 to Int64
-*/
+        /* 
+        Int32 to Int64: Method omitted
+        There is a predefined implicit conversion from Int32 to Int64
+        */
 
-/* 
-UInt32 to Int64: Method omitted
-There is a predefined implicit conversion from UInt32 to Int64
-*/
+        /* 
+        UInt32 to Int64: Method omitted
+        There is a predefined implicit conversion from UInt32 to Int64
+        */
 
         /// <summary>
         /// Converts this UInt64 to Int64 or returns the Int64 default value

@@ -63,10 +63,10 @@ namespace ThisToThat
             return (thisSByte < (sbyte)0) ? (UInt16?)null : (UInt16)thisSByte;
         }
 
-/* 
-Byte to UInt16: Method omitted
-There is a predefined implicit conversion from Byte to UInt16
-*/
+        /* 
+        Byte to UInt16: Method omitted
+        There is a predefined implicit conversion from Byte to UInt16
+        */
 
         /// <summary>
         /// Converts this Int16 to UInt16 or returns the UInt16 default value
