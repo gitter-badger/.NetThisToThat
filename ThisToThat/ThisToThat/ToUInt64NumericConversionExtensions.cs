@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToUInt64Extensions
     {
 
-
         /// <summary>
         /// Converts this SByte to UInt64 or returns the UInt64 default value
         /// </summary>
@@ -257,6 +256,40 @@ namespace ThisToThat
         UInt64 is an integral type. Decimal is non-integral (can contain fractions).
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable UInt64.
+        /// Null is returned if the value does not successfully parse to UInt64.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable UInt64.</returns>
+        public static UInt64? ToUInt64Nullable(this string strThisString)
+        {
+            UInt64 uint64Return;
+            return UInt64.TryParse(strThisString, out uint64Return) ? uint64Return : (UInt64?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as UInt64.
+        /// The default value passed in is returned if the string does not successfully parse to UInt64.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to UInt64.</param>
+        /// <returns>This string converted to UInt64, or the default value if conversion unsuccessful.</returns>
+        public static UInt64 ToUInt64OrDefault(this string strThisString, UInt64 uint64Default)
+        {
+            UInt64 uint64Return;
+            return UInt64.TryParse(strThisString, out uint64Return) ? uint64Return : uint64Default;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as UInt64.
+        /// The default value passed in is returned if the string does not successfully parse to UInt64.
+        /// </summary>
+        /// <returns>This string converted to UInt64, or the default value if conversion unsuccessful.</returns>
+        public static UInt64 ToUInt64(this string strThisString, UInt64 uint64Default = default(UInt64))
+        {
+            UInt64 uint64Return;
+            return UInt64.TryParse(strThisString, out uint64Return) ? uint64Return : uint64Default;
+        }
 
     }
 }

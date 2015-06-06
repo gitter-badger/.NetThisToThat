@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToUInt32Extensions
     {
 
-
         /// <summary>
         /// Converts this SByte to UInt32 or returns the UInt32 default value
         /// </summary>
@@ -306,6 +305,40 @@ namespace ThisToThat
         UInt32 is an integral type. Decimal is non-integral (can contain fractions).
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable UInt32.
+        /// Null is returned if the value does not successfully parse to UInt32.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable UInt32.</returns>
+        public static UInt32? ToUInt32Nullable(this string strThisString)
+        {
+            UInt32 uint32Return;
+            return UInt32.TryParse(strThisString, out uint32Return) ? uint32Return : (UInt32?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as UInt32.
+        /// The default value passed in is returned if the string does not successfully parse to UInt32.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to UInt32.</param>
+        /// <returns>This string converted to UInt32, or the default value if conversion unsuccessful.</returns>
+        public static UInt32 ToUInt32OrDefault(this string strThisString, UInt32 uint32Default)
+        {
+            UInt32 uint32Return;
+            return UInt32.TryParse(strThisString, out uint32Return) ? uint32Return : uint32Default;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as UInt32.
+        /// The default value passed in is returned if the string does not successfully parse to UInt32.
+        /// </summary>
+        /// <returns>This string converted to UInt32, or the default value if conversion unsuccessful.</returns>
+        public static UInt32 ToUInt32(this string strThisString, UInt32 uint32Default = default(UInt32))
+        {
+            UInt32 uint32Return;
+            return UInt32.TryParse(strThisString, out uint32Return) ? uint32Return : uint32Default;
+        }
 
     }
 }

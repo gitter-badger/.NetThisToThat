@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToSingleExtensions
     {
 
-
         /* 
         SByte to Single: Method omitted
         There is a predefined implicit conversion from SByte to Single
@@ -112,6 +111,40 @@ namespace ThisToThat
         Decimal myDecimal = Decimal.MinValue;
         Single mySingle = (Single)myDecimal;
         */
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable Single.
+        /// Null is returned if the value does not successfully parse to Single.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable Single.</returns>
+        public static Single? ToSingleNullable(this string strThisString)
+        {
+            Single singleReturn;
+            return Single.TryParse(strThisString, out singleReturn) ? singleReturn : (Single?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Single.
+        /// The default value passed in is returned if the string does not successfully parse to Single.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to Single.</param>
+        /// <returns>This string converted to Single, or the default value if conversion unsuccessful.</returns>
+        public static Single ToSingleOrDefault(this string strThisString, Single singleDefault)
+        {
+            Single singleReturn;
+            return Single.TryParse(strThisString, out singleReturn) ? singleReturn : singleDefault;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Single.
+        /// The default value passed in is returned if the string does not successfully parse to Single.
+        /// </summary>
+        /// <returns>This string converted to Single, or the default value if conversion unsuccessful.</returns>
+        public static Single ToSingle(this string strThisString, Single singleDefault = default(Single))
+        {
+            Single singleReturn;
+            return Single.TryParse(strThisString, out singleReturn) ? singleReturn : singleDefault;
+        }
 
     }
 }

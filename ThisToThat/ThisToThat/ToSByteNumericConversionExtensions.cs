@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToSByteExtensions
     {
 
-
         /// <summary>
         /// Converts this Byte to SByte or returns the SByte default value
         /// </summary>
@@ -404,6 +403,40 @@ namespace ThisToThat
         SByte is an integral type. Decimal is non-integral (can contain fractions).
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable SByte.
+        /// Null is returned if the value does not successfully parse to SByte.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable SByte.</returns>
+        public static SByte? ToSByteNullable(this string strThisString)
+        {
+            SByte sbyteReturn;
+            return SByte.TryParse(strThisString, out sbyteReturn) ? sbyteReturn : (SByte?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as SByte.
+        /// The default value passed in is returned if the string does not successfully parse to SByte.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to SByte.</param>
+        /// <returns>This string converted to SByte, or the default value if conversion unsuccessful.</returns>
+        public static SByte ToSByteOrDefault(this string strThisString, SByte sbyteDefault)
+        {
+            SByte sbyteReturn;
+            return SByte.TryParse(strThisString, out sbyteReturn) ? sbyteReturn : sbyteDefault;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as SByte.
+        /// The default value passed in is returned if the string does not successfully parse to SByte.
+        /// </summary>
+        /// <returns>This string converted to SByte, or the default value if conversion unsuccessful.</returns>
+        public static SByte ToSByte(this string strThisString, SByte sbyteDefault = default(SByte))
+        {
+            SByte sbyteReturn;
+            return SByte.TryParse(strThisString, out sbyteReturn) ? sbyteReturn : sbyteDefault;
+        }
 
     }
 }

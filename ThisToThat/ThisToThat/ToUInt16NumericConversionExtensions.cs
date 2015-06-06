@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToUInt16Extensions
     {
 
-
         /// <summary>
         /// Converts this SByte to UInt16 or returns the UInt16 default value
         /// </summary>
@@ -355,6 +354,40 @@ namespace ThisToThat
         UInt16 is an integral type. Decimal is non-integral (can contain fractions).
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable UInt16.
+        /// Null is returned if the value does not successfully parse to UInt16.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable UInt16.</returns>
+        public static UInt16? ToUInt16Nullable(this string strThisString)
+        {
+            UInt16 uint16Return;
+            return UInt16.TryParse(strThisString, out uint16Return) ? uint16Return : (UInt16?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as UInt16.
+        /// The default value passed in is returned if the string does not successfully parse to UInt16.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to UInt16.</param>
+        /// <returns>This string converted to UInt16, or the default value if conversion unsuccessful.</returns>
+        public static UInt16 ToUInt16OrDefault(this string strThisString, UInt16 uint16Default)
+        {
+            UInt16 uint16Return;
+            return UInt16.TryParse(strThisString, out uint16Return) ? uint16Return : uint16Default;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as UInt16.
+        /// The default value passed in is returned if the string does not successfully parse to UInt16.
+        /// </summary>
+        /// <returns>This string converted to UInt16, or the default value if conversion unsuccessful.</returns>
+        public static UInt16 ToUInt16(this string strThisString, UInt16 uint16Default = default(UInt16))
+        {
+            UInt16 uint16Return;
+            return UInt16.TryParse(strThisString, out uint16Return) ? uint16Return : uint16Default;
+        }
 
     }
 }

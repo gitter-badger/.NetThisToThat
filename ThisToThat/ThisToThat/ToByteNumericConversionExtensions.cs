@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToByteExtensions
     {
 
-
         /// <summary>
         /// Converts this SByte to Byte or returns the Byte default value
         /// </summary>
@@ -404,6 +403,40 @@ namespace ThisToThat
         Byte is an integral type. Decimal is non-integral (can contain fractions).
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable Byte.
+        /// Null is returned if the value does not successfully parse to Byte.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable Byte.</returns>
+        public static Byte? ToByteNullable(this string strThisString)
+        {
+            Byte byteReturn;
+            return Byte.TryParse(strThisString, out byteReturn) ? byteReturn : (Byte?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Byte.
+        /// The default value passed in is returned if the string does not successfully parse to Byte.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to Byte.</param>
+        /// <returns>This string converted to Byte, or the default value if conversion unsuccessful.</returns>
+        public static Byte ToByteOrDefault(this string strThisString, Byte byteDefault)
+        {
+            Byte byteReturn;
+            return Byte.TryParse(strThisString, out byteReturn) ? byteReturn : byteDefault;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Byte.
+        /// The default value passed in is returned if the string does not successfully parse to Byte.
+        /// </summary>
+        /// <returns>This string converted to Byte, or the default value if conversion unsuccessful.</returns>
+        public static Byte ToByte(this string strThisString, Byte byteDefault = default(Byte))
+        {
+            Byte byteReturn;
+            return Byte.TryParse(strThisString, out byteReturn) ? byteReturn : byteDefault;
+        }
 
     }
 }

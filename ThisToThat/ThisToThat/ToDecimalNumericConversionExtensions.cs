@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToDecimalExtensions
     {
 
-
         /* 
         SByte to Decimal: Method omitted
         There is a predefined implicit conversion from SByte to Decimal
@@ -155,6 +154,40 @@ namespace ThisToThat
         public static Decimal? ToDecimalNullable(this Double thisDouble)
         {
             return (thisDouble < -79228162514264337593543950335d || thisDouble > 79228162514264337593543950335d) ? (Decimal?)null : (Decimal)thisDouble;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable Decimal.
+        /// Null is returned if the value does not successfully parse to Decimal.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable Decimal.</returns>
+        public static Decimal? ToDecimalNullable(this string strThisString)
+        {
+            Decimal decimalReturn;
+            return Decimal.TryParse(strThisString, out decimalReturn) ? decimalReturn : (Decimal?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Decimal.
+        /// The default value passed in is returned if the string does not successfully parse to Decimal.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to Decimal.</param>
+        /// <returns>This string converted to Decimal, or the default value if conversion unsuccessful.</returns>
+        public static Decimal ToDecimalOrDefault(this string strThisString, Decimal decimalDefault)
+        {
+            Decimal decimalReturn;
+            return Decimal.TryParse(strThisString, out decimalReturn) ? decimalReturn : decimalDefault;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Decimal.
+        /// The default value passed in is returned if the string does not successfully parse to Decimal.
+        /// </summary>
+        /// <returns>This string converted to Decimal, or the default value if conversion unsuccessful.</returns>
+        public static Decimal ToDecimal(this string strThisString, Decimal decimalDefault = default(Decimal))
+        {
+            Decimal decimalReturn;
+            return Decimal.TryParse(strThisString, out decimalReturn) ? decimalReturn : decimalDefault;
         }
 
     }

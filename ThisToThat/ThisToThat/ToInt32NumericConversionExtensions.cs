@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToInt32Extensions
     {
 
-
         /* 
         SByte to Int32: Method omitted
         There is a predefined implicit conversion from SByte to Int32
@@ -208,6 +207,40 @@ namespace ThisToThat
         Int32 is an integral type. Decimal is non-integral (can contain fractions).
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable Int32.
+        /// Null is returned if the value does not successfully parse to Int32.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable Int32.</returns>
+        public static Int32? ToInt32Nullable(this string strThisString)
+        {
+            Int32 int32Return;
+            return Int32.TryParse(strThisString, out int32Return) ? int32Return : (Int32?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Int32.
+        /// The default value passed in is returned if the string does not successfully parse to Int32.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to Int32.</param>
+        /// <returns>This string converted to Int32, or the default value if conversion unsuccessful.</returns>
+        public static Int32 ToInt32OrDefault(this string strThisString, Int32 int32Default)
+        {
+            Int32 int32Return;
+            return Int32.TryParse(strThisString, out int32Return) ? int32Return : int32Default;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Int32.
+        /// The default value passed in is returned if the string does not successfully parse to Int32.
+        /// </summary>
+        /// <returns>This string converted to Int32, or the default value if conversion unsuccessful.</returns>
+        public static Int32 ToInt32(this string strThisString, Int32 int32Default = default(Int32))
+        {
+            Int32 int32Return;
+            return Int32.TryParse(strThisString, out int32Return) ? int32Return : int32Default;
+        }
 
     }
 }

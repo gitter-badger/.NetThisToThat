@@ -8,7 +8,6 @@ namespace ThisToThat
     public static partial class ToInt16Extensions
     {
 
-
         /* 
         SByte to Int16: Method omitted
         There is a predefined implicit conversion from SByte to Int16
@@ -306,6 +305,40 @@ namespace ThisToThat
         Int16 is an integral type. Decimal is non-integral (can contain fractions).
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
+
+        /// <summary>
+        /// Converts and returns this string's value as a nullable Int16.
+        /// Null is returned if the value does not successfully parse to Int16.
+        /// </summary>
+        /// <returns>This string's value converted to a nullable Int16.</returns>
+        public static Int16? ToInt16Nullable(this string strThisString)
+        {
+            Int16 int16Return;
+            return Int16.TryParse(strThisString, out int16Return) ? int16Return : (Int16?)null;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Int16.
+        /// The default value passed in is returned if the string does not successfully parse to Int16.
+        /// </summary>
+        /// <param name="intDefault">Value to return if this string does not parse to Int16.</param>
+        /// <returns>This string converted to Int16, or the default value if conversion unsuccessful.</returns>
+        public static Int16 ToInt16OrDefault(this string strThisString, Int16 int16Default)
+        {
+            Int16 int16Return;
+            return Int16.TryParse(strThisString, out int16Return) ? int16Return : int16Default;
+        }
+
+        /// <summary>
+        /// Converts and returns this string's value as Int16.
+        /// The default value passed in is returned if the string does not successfully parse to Int16.
+        /// </summary>
+        /// <returns>This string converted to Int16, or the default value if conversion unsuccessful.</returns>
+        public static Int16 ToInt16(this string strThisString, Int16 int16Default = default(Int16))
+        {
+            Int16 int16Return;
+            return Int16.TryParse(strThisString, out int16Return) ? int16Return : int16Default;
+        }
 
     }
 }
