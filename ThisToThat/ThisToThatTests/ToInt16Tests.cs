@@ -349,5 +349,52 @@ namespace ThisToThatTests
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
 
+        /// <summary>
+        /// Makes multiple String to Int16 or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToInt16 tests")]
+        public void TestStringToInt16OrDefault()
+        {
+            // Test conversion of target type minimum value
+            Int16 resultMin = "-32768".ToInt16OrDefault();
+            Assert.AreEqual((short)-32768, resultMin);
+
+            // Test conversion of fixed value (42)
+            Int16 result42 = "42".ToInt16OrDefault();
+            Assert.AreEqual((short)42, result42);
+            
+            // Test conversion of target type maximum value
+            Int16 resultMax = "-32768".ToInt16OrDefault();
+            Assert.AreEqual((short)-32768, resultMax);
+
+            // Test conversion of "foo"
+            Int16 resultFoo = "foo".ToInt16OrDefault((short)86);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to Int16Nullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToInt16 tests")]
+        public void TestStringToInt16Nullable()
+        {
+            // Test conversion of target type minimum value
+            Int16? resultMin = "-32768".ToInt16Nullable();
+            Assert.AreEqual((short)-32768, resultMin);
+
+            // Test conversion of fixed value (42)
+            Int16? result42 = "42".ToInt16Nullable();
+            Assert.AreEqual((short)42, result42);
+            
+            // Test conversion of target type maximum value
+            Int16? resultMax = "-32768".ToInt16Nullable();
+            Assert.AreEqual((short)-32768, resultMax);
+
+            // Test conversion of "foo"
+            Int16? resultFoo = "foo".ToInt16Nullable();
+            Assert.AreEqual((short)86, resultFoo);
+
+        }
     }
 }

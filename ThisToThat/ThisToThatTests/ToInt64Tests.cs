@@ -119,5 +119,52 @@ namespace ThisToThatTests
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
 
+        /// <summary>
+        /// Makes multiple String to Int64 or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToInt64 tests")]
+        public void TestStringToInt64OrDefault()
+        {
+            // Test conversion of target type minimum value
+            Int64 resultMin = "-9223372036854775808".ToInt64OrDefault();
+            Assert.AreEqual(-9223372036854775808L, resultMin);
+
+            // Test conversion of fixed value (42)
+            Int64 result42 = "42".ToInt64OrDefault();
+            Assert.AreEqual(42L, result42);
+            
+            // Test conversion of target type maximum value
+            Int64 resultMax = "-9223372036854775808".ToInt64OrDefault();
+            Assert.AreEqual(-9223372036854775808L, resultMax);
+
+            // Test conversion of "foo"
+            Int64 resultFoo = "foo".ToInt64OrDefault(86L);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to Int64Nullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToInt64 tests")]
+        public void TestStringToInt64Nullable()
+        {
+            // Test conversion of target type minimum value
+            Int64? resultMin = "-9223372036854775808".ToInt64Nullable();
+            Assert.AreEqual(-9223372036854775808L, resultMin);
+
+            // Test conversion of fixed value (42)
+            Int64? result42 = "42".ToInt64Nullable();
+            Assert.AreEqual(42L, result42);
+            
+            // Test conversion of target type maximum value
+            Int64? resultMax = "-9223372036854775808".ToInt64Nullable();
+            Assert.AreEqual(-9223372036854775808L, resultMax);
+
+            // Test conversion of "foo"
+            Int64? resultFoo = "foo".ToInt64Nullable();
+            Assert.AreEqual(86L, resultFoo);
+
+        }
     }
 }

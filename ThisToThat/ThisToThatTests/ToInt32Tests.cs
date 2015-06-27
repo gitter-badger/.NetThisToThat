@@ -234,5 +234,52 @@ namespace ThisToThatTests
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
 
+        /// <summary>
+        /// Makes multiple String to Int32 or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToInt32 tests")]
+        public void TestStringToInt32OrDefault()
+        {
+            // Test conversion of target type minimum value
+            Int32 resultMin = "-2147483648".ToInt32OrDefault();
+            Assert.AreEqual(-2147483648, resultMin);
+
+            // Test conversion of fixed value (42)
+            Int32 result42 = "42".ToInt32OrDefault();
+            Assert.AreEqual(42, result42);
+            
+            // Test conversion of target type maximum value
+            Int32 resultMax = "-2147483648".ToInt32OrDefault();
+            Assert.AreEqual(-2147483648, resultMax);
+
+            // Test conversion of "foo"
+            Int32 resultFoo = "foo".ToInt32OrDefault(86);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to Int32Nullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToInt32 tests")]
+        public void TestStringToInt32Nullable()
+        {
+            // Test conversion of target type minimum value
+            Int32? resultMin = "-2147483648".ToInt32Nullable();
+            Assert.AreEqual(-2147483648, resultMin);
+
+            // Test conversion of fixed value (42)
+            Int32? result42 = "42".ToInt32Nullable();
+            Assert.AreEqual(42, result42);
+            
+            // Test conversion of target type maximum value
+            Int32? resultMax = "-2147483648".ToInt32Nullable();
+            Assert.AreEqual(-2147483648, resultMax);
+
+            // Test conversion of "foo"
+            Int32? resultFoo = "foo".ToInt32Nullable();
+            Assert.AreEqual(86, resultFoo);
+
+        }
     }
 }

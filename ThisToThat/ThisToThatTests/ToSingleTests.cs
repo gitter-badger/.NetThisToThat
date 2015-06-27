@@ -124,5 +124,52 @@ namespace ThisToThatTests
         Single mySingle = (Single)myDecimal;
         */
 
+        /// <summary>
+        /// Makes multiple String to Single or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToSingle tests")]
+        public void TestStringToSingleOrDefault()
+        {
+            // Test conversion of target type minimum value
+            Single resultMin = "-3.402823E+38".ToSingleOrDefault();
+            Assert.AreEqual(-3.402823E+38f, resultMin);
+
+            // Test conversion of fixed value (42)
+            Single result42 = "42".ToSingleOrDefault();
+            Assert.AreEqual(42f, result42);
+            
+            // Test conversion of target type maximum value
+            Single resultMax = "-3.402823E+38".ToSingleOrDefault();
+            Assert.AreEqual(-3.402823E+38f, resultMax);
+
+            // Test conversion of "foo"
+            Single resultFoo = "foo".ToSingleOrDefault(86f);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to SingleNullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToSingle tests")]
+        public void TestStringToSingleNullable()
+        {
+            // Test conversion of target type minimum value
+            Single? resultMin = "-3.402823E+38".ToSingleNullable();
+            Assert.AreEqual(-3.402823E+38f, resultMin);
+
+            // Test conversion of fixed value (42)
+            Single? result42 = "42".ToSingleNullable();
+            Assert.AreEqual(42f, result42);
+            
+            // Test conversion of target type maximum value
+            Single? resultMax = "-3.402823E+38".ToSingleNullable();
+            Assert.AreEqual(-3.402823E+38f, resultMax);
+
+            // Test conversion of "foo"
+            Single? resultFoo = "foo".ToSingleNullable();
+            Assert.AreEqual(86f, resultFoo);
+
+        }
     }
 }

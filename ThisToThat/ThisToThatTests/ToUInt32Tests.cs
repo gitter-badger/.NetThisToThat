@@ -349,5 +349,52 @@ namespace ThisToThatTests
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
 
+        /// <summary>
+        /// Makes multiple String to UInt32 or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToUInt32 tests")]
+        public void TestStringToUInt32OrDefault()
+        {
+            // Test conversion of target type minimum value
+            UInt32 resultMin = "0".ToUInt32OrDefault();
+            Assert.AreEqual(0u, resultMin);
+
+            // Test conversion of fixed value (42)
+            UInt32 result42 = "42".ToUInt32OrDefault();
+            Assert.AreEqual(42u, result42);
+            
+            // Test conversion of target type maximum value
+            UInt32 resultMax = "0".ToUInt32OrDefault();
+            Assert.AreEqual(0u, resultMax);
+
+            // Test conversion of "foo"
+            UInt32 resultFoo = "foo".ToUInt32OrDefault(86u);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to UInt32Nullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToUInt32 tests")]
+        public void TestStringToUInt32Nullable()
+        {
+            // Test conversion of target type minimum value
+            UInt32? resultMin = "0".ToUInt32Nullable();
+            Assert.AreEqual(0u, resultMin);
+
+            // Test conversion of fixed value (42)
+            UInt32? result42 = "42".ToUInt32Nullable();
+            Assert.AreEqual(42u, result42);
+            
+            // Test conversion of target type maximum value
+            UInt32? resultMax = "0".ToUInt32Nullable();
+            Assert.AreEqual(0u, resultMax);
+
+            // Test conversion of "foo"
+            UInt32? resultFoo = "foo".ToUInt32Nullable();
+            Assert.AreEqual(86u, resultFoo);
+
+        }
     }
 }

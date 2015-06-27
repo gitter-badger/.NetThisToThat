@@ -178,5 +178,52 @@ namespace ThisToThatTests
             Assert.IsNull(result);
         }
 
+        /// <summary>
+        /// Makes multiple String to Decimal or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToDecimal tests")]
+        public void TestStringToDecimalOrDefault()
+        {
+            // Test conversion of target type minimum value
+            Decimal resultMin = "-79228162514264337593543950335".ToDecimalOrDefault();
+            Assert.AreEqual(-79228162514264337593543950335m, resultMin);
+
+            // Test conversion of fixed value (42)
+            Decimal result42 = "42".ToDecimalOrDefault();
+            Assert.AreEqual(42m, result42);
+            
+            // Test conversion of target type maximum value
+            Decimal resultMax = "-79228162514264337593543950335".ToDecimalOrDefault();
+            Assert.AreEqual(-79228162514264337593543950335m, resultMax);
+
+            // Test conversion of "foo"
+            Decimal resultFoo = "foo".ToDecimalOrDefault(86m);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to DecimalNullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToDecimal tests")]
+        public void TestStringToDecimalNullable()
+        {
+            // Test conversion of target type minimum value
+            Decimal? resultMin = "-79228162514264337593543950335".ToDecimalNullable();
+            Assert.AreEqual(-79228162514264337593543950335m, resultMin);
+
+            // Test conversion of fixed value (42)
+            Decimal? result42 = "42".ToDecimalNullable();
+            Assert.AreEqual(42m, result42);
+            
+            // Test conversion of target type maximum value
+            Decimal? resultMax = "-79228162514264337593543950335".ToDecimalNullable();
+            Assert.AreEqual(-79228162514264337593543950335m, resultMax);
+
+            // Test conversion of "foo"
+            Decimal? resultFoo = "foo".ToDecimalNullable();
+            Assert.AreEqual(86m, resultFoo);
+
+        }
     }
 }

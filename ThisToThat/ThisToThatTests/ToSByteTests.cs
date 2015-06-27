@@ -464,5 +464,52 @@ namespace ThisToThatTests
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
 
+        /// <summary>
+        /// Makes multiple String to SByte or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToSByte tests")]
+        public void TestStringToSByteOrDefault()
+        {
+            // Test conversion of target type minimum value
+            SByte resultMin = "-128".ToSByteOrDefault();
+            Assert.AreEqual((sbyte)-128, resultMin);
+
+            // Test conversion of fixed value (42)
+            SByte result42 = "42".ToSByteOrDefault();
+            Assert.AreEqual((sbyte)42, result42);
+            
+            // Test conversion of target type maximum value
+            SByte resultMax = "-128".ToSByteOrDefault();
+            Assert.AreEqual((sbyte)-128, resultMax);
+
+            // Test conversion of "foo"
+            SByte resultFoo = "foo".ToSByteOrDefault((sbyte)86);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to SByteNullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToSByte tests")]
+        public void TestStringToSByteNullable()
+        {
+            // Test conversion of target type minimum value
+            SByte? resultMin = "-128".ToSByteNullable();
+            Assert.AreEqual((sbyte)-128, resultMin);
+
+            // Test conversion of fixed value (42)
+            SByte? result42 = "42".ToSByteNullable();
+            Assert.AreEqual((sbyte)42, result42);
+            
+            // Test conversion of target type maximum value
+            SByte? resultMax = "-128".ToSByteNullable();
+            Assert.AreEqual((sbyte)-128, resultMax);
+
+            // Test conversion of "foo"
+            SByte? resultFoo = "foo".ToSByteNullable();
+            Assert.AreEqual((sbyte)86, resultFoo);
+
+        }
     }
 }

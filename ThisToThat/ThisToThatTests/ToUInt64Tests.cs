@@ -291,5 +291,52 @@ namespace ThisToThatTests
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
 
+        /// <summary>
+        /// Makes multiple String to UInt64 or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToUInt64 tests")]
+        public void TestStringToUInt64OrDefault()
+        {
+            // Test conversion of target type minimum value
+            UInt64 resultMin = "0".ToUInt64OrDefault();
+            Assert.AreEqual(0UL, resultMin);
+
+            // Test conversion of fixed value (42)
+            UInt64 result42 = "42".ToUInt64OrDefault();
+            Assert.AreEqual(42UL, result42);
+            
+            // Test conversion of target type maximum value
+            UInt64 resultMax = "0".ToUInt64OrDefault();
+            Assert.AreEqual(0UL, resultMax);
+
+            // Test conversion of "foo"
+            UInt64 resultFoo = "foo".ToUInt64OrDefault(86UL);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to UInt64Nullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToUInt64 tests")]
+        public void TestStringToUInt64Nullable()
+        {
+            // Test conversion of target type minimum value
+            UInt64? resultMin = "0".ToUInt64Nullable();
+            Assert.AreEqual(0UL, resultMin);
+
+            // Test conversion of fixed value (42)
+            UInt64? result42 = "42".ToUInt64Nullable();
+            Assert.AreEqual(42UL, result42);
+            
+            // Test conversion of target type maximum value
+            UInt64? resultMax = "0".ToUInt64Nullable();
+            Assert.AreEqual(0UL, resultMax);
+
+            // Test conversion of "foo"
+            UInt64? resultFoo = "foo".ToUInt64Nullable();
+            Assert.AreEqual(86UL, resultFoo);
+
+        }
     }
 }

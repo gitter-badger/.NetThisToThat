@@ -465,5 +465,52 @@ namespace ThisToThatTests
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
 
+        /// <summary>
+        /// Makes multiple String to Byte or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToByte tests")]
+        public void TestStringToByteOrDefault()
+        {
+            // Test conversion of target type minimum value
+            Byte resultMin = "0".ToByteOrDefault();
+            Assert.AreEqual((byte)0, resultMin);
+
+            // Test conversion of fixed value (42)
+            Byte result42 = "42".ToByteOrDefault();
+            Assert.AreEqual((byte)42, result42);
+            
+            // Test conversion of target type maximum value
+            Byte resultMax = "0".ToByteOrDefault();
+            Assert.AreEqual((byte)0, resultMax);
+
+            // Test conversion of "foo"
+            Byte resultFoo = "foo".ToByteOrDefault((byte)86);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to ByteNullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToByte tests")]
+        public void TestStringToByteNullable()
+        {
+            // Test conversion of target type minimum value
+            Byte? resultMin = "0".ToByteNullable();
+            Assert.AreEqual((byte)0, resultMin);
+
+            // Test conversion of fixed value (42)
+            Byte? result42 = "42".ToByteNullable();
+            Assert.AreEqual((byte)42, result42);
+            
+            // Test conversion of target type maximum value
+            Byte? resultMax = "0".ToByteNullable();
+            Assert.AreEqual((byte)0, resultMax);
+
+            // Test conversion of "foo"
+            Byte? resultFoo = "foo".ToByteNullable();
+            Assert.AreEqual((byte)86, resultFoo);
+
+        }
     }
 }

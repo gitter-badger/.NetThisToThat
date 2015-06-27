@@ -407,5 +407,52 @@ namespace ThisToThatTests
         Conversions involving possible rounding or truncation are not currently provided by this library.
         */
 
+        /// <summary>
+        /// Makes multiple String to UInt16 or default conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToUInt16 tests")]
+        public void TestStringToUInt16OrDefault()
+        {
+            // Test conversion of target type minimum value
+            UInt16 resultMin = "0".ToUInt16OrDefault();
+            Assert.AreEqual((ushort)0, resultMin);
+
+            // Test conversion of fixed value (42)
+            UInt16 result42 = "42".ToUInt16OrDefault();
+            Assert.AreEqual((ushort)42, result42);
+            
+            // Test conversion of target type maximum value
+            UInt16 resultMax = "0".ToUInt16OrDefault();
+            Assert.AreEqual((ushort)0, resultMax);
+
+            // Test conversion of "foo"
+            UInt16 resultFoo = "foo".ToUInt16OrDefault((ushort)86);
+            Assert.IsNull(resultFoo);
+
+        }
+
+        /// <summary>
+        /// Makes multiple String to UInt16Nullable conversions and asserts that the results are correct.
+        /// </summary>
+        [TestMethod, TestCategory("ToUInt16 tests")]
+        public void TestStringToUInt16Nullable()
+        {
+            // Test conversion of target type minimum value
+            UInt16? resultMin = "0".ToUInt16Nullable();
+            Assert.AreEqual((ushort)0, resultMin);
+
+            // Test conversion of fixed value (42)
+            UInt16? result42 = "42".ToUInt16Nullable();
+            Assert.AreEqual((ushort)42, result42);
+            
+            // Test conversion of target type maximum value
+            UInt16? resultMax = "0".ToUInt16Nullable();
+            Assert.AreEqual((ushort)0, resultMax);
+
+            // Test conversion of "foo"
+            UInt16? resultFoo = "foo".ToUInt16Nullable();
+            Assert.AreEqual((ushort)86, resultFoo);
+
+        }
     }
 }
