@@ -9,24 +9,6 @@ namespace ThisToThat
     {
 
         /// <summary>
-        /// Converts this SByte to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This SByte converted to Byte</returns>
-        /// <remarks>
-        /// Source type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte ToByte(this SByte thisSByte)
-        {
-            return thisSByte.ToByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this SByte to Byte or returns the specified default value
         /// </summary>
         /// <returns>This SByte converted to Byte</returns>
@@ -60,24 +42,6 @@ namespace ThisToThat
         public static Byte? ToByteNullable(this SByte thisSByte)
         {
             return (thisSByte < (sbyte)0) ? (Byte?)null : (Byte)thisSByte;
-        }
-
-        /// <summary>
-        /// Converts this Int16 to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This Int16 converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte ToByte(this Int16 thisInt16)
-        {
-            return thisInt16.ToByteNullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -117,24 +81,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this UInt16 to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This UInt16 converted to Byte</returns>
-        /// <remarks>
-        /// Source type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte ToByte(this UInt16 thisUInt16)
-        {
-            return thisUInt16.ToByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this UInt16 to Byte or returns the specified default value
         /// </summary>
         /// <returns>This UInt16 converted to Byte</returns>
@@ -168,24 +114,6 @@ namespace ThisToThat
         public static Byte? ToByteNullable(this UInt16 thisUInt16)
         {
             return (thisUInt16 > (ushort)255) ? (Byte?)null : (Byte)thisUInt16;
-        }
-
-        /// <summary>
-        /// Converts this Int32 to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This Int32 converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Int32
-        /// Min value: -2147483648
-        /// Max value: 2147483647
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte ToByte(this Int32 thisInt32)
-        {
-            return thisInt32.ToByteNullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -225,24 +153,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this UInt32 to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This UInt32 converted to Byte</returns>
-        /// <remarks>
-        /// Source type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte ToByte(this UInt32 thisUInt32)
-        {
-            return thisUInt32.ToByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this UInt32 to Byte or returns the specified default value
         /// </summary>
         /// <returns>This UInt32 converted to Byte</returns>
@@ -279,24 +189,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this Int64 to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This Int64 converted to Byte</returns>
-        /// <remarks>
-        /// Source type: Int64
-        /// Min value: -9223372036854775808
-        /// Max value: 9223372036854775807
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte ToByte(this Int64 thisInt64)
-        {
-            return thisInt64.ToByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Int64 to Byte or returns the specified default value
         /// </summary>
         /// <returns>This Int64 converted to Byte</returns>
@@ -330,24 +222,6 @@ namespace ThisToThat
         public static Byte? ToByteNullable(this Int64 thisInt64)
         {
             return (thisInt64 < 0L || thisInt64 > 255L) ? (Byte?)null : (Byte)thisInt64;
-        }
-
-        /// <summary>
-        /// Converts this UInt64 to Byte or returns the Byte default value
-        /// </summary>
-        /// <returns>This UInt64 converted to Byte</returns>
-        /// <remarks>
-        /// Source type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        ///
-        /// Target type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        /// </remarks>
-        public static Byte ToByte(this UInt64 thisUInt64)
-        {
-            return thisUInt64.ToByteNullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -414,25 +288,13 @@ namespace ThisToThat
             Byte byteReturn;
             return Byte.TryParse(strThisString, out byteReturn) ? byteReturn : (Byte?)null;
         }
-
-        /// <summary>
-        /// Converts and returns this string's value as Byte.
-        /// The default value passed in is returned if the string does not successfully parse to Byte.
-        /// </summary>
-        /// <param name="intDefault">Value to return if this string does not parse to Byte.</param>
-        /// <returns>This string converted to Byte, or the default value if conversion unsuccessful.</returns>
-        public static Byte ToByteOrDefault(this string strThisString, Byte byteDefault)
-        {
-            Byte byteReturn;
-            return Byte.TryParse(strThisString, out byteReturn) ? byteReturn : byteDefault;
-        }
-
+        
         /// <summary>
         /// Converts and returns this string's value as Byte.
         /// The default value passed in is returned if the string does not successfully parse to Byte.
         /// </summary>
         /// <returns>This string converted to Byte, or the default value if conversion unsuccessful.</returns>
-        public static Byte ToByte(this string strThisString, Byte byteDefault = default(Byte))
+        public static Byte ToByteOrDefault(this string strThisString, Byte byteDefault = default(Byte))
         {
             Byte byteReturn;
             return Byte.TryParse(strThisString, out byteReturn) ? byteReturn : byteDefault;

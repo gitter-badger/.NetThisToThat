@@ -364,12 +364,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42u, result42);
             
             // Test conversion of target type maximum value
-            UInt32 resultMax = "0".ToUInt32OrDefault();
-            Assert.AreEqual(0u, resultMax);
+            UInt32 resultMax = "4294967295".ToUInt32OrDefault();
+            Assert.AreEqual(4294967295u, resultMax);
 
             // Test conversion of "foo"
             UInt32 resultFoo = "foo".ToUInt32OrDefault(86u);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual(86u, resultFoo);
 
         }
 
@@ -388,12 +388,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42u, result42);
             
             // Test conversion of target type maximum value
-            UInt32? resultMax = "0".ToUInt32Nullable();
-            Assert.AreEqual(0u, resultMax);
+            UInt32? resultMax = "4294967295".ToUInt32Nullable();
+            Assert.AreEqual(4294967295u, resultMax);
 
             // Test conversion of "foo"
             UInt32? resultFoo = "foo".ToUInt32Nullable();
-            Assert.AreEqual(86u, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

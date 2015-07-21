@@ -49,35 +49,17 @@ namespace ThisToThat
         */
 
         /// <summary>
-        /// Converts this Double to Single or returns the Single default value
-        /// </summary>
-        /// <returns>This Double converted to Single</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        /// </remarks>
-        public static Single ToSingle(this Double thisDouble)
-        {
-            return thisDouble.ToSingleNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Double to Single or returns the specified default value
         /// </summary>
         /// <returns>This Double converted to Single</returns>
         /// <remarks>
         /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
+        /// Min value: -1.7976931348623157E+308
+        /// Max value: 1.7976931348623157E+308
         ///
         /// Target type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
+        /// Min value: -3.40282347E+38
+        /// Max value: 3.40282347E+38
         /// </remarks>
         public static Single ToSingleOrDefault(this Double thisDouble, Single defaultValue = default(Single))
         {
@@ -90,16 +72,16 @@ namespace ThisToThat
         /// <returns>This Double converted to Single</returns>
         /// <remarks>
         /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
+        /// Min value: -1.7976931348623157E+308
+        /// Max value: 1.7976931348623157E+308
         ///
         /// Target type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
+        /// Min value: -3.40282347E+38
+        /// Max value: 3.40282347E+38
         /// </remarks>
         public static Single? ToSingleNullable(this Double thisDouble)
         {
-            return (thisDouble < -3.402823E+38d || thisDouble > 3.402823E+38d) ? (Single?)null : (Single)thisDouble;
+            return (thisDouble < -3.40282347E+38d || thisDouble > 3.40282347E+38d) ? (Single?)null : (Single)thisDouble;
         }
 
         /* 
@@ -122,25 +104,13 @@ namespace ThisToThat
             Single singleReturn;
             return Single.TryParse(strThisString, out singleReturn) ? singleReturn : (Single?)null;
         }
-
-        /// <summary>
-        /// Converts and returns this string's value as Single.
-        /// The default value passed in is returned if the string does not successfully parse to Single.
-        /// </summary>
-        /// <param name="intDefault">Value to return if this string does not parse to Single.</param>
-        /// <returns>This string converted to Single, or the default value if conversion unsuccessful.</returns>
-        public static Single ToSingleOrDefault(this string strThisString, Single singleDefault)
-        {
-            Single singleReturn;
-            return Single.TryParse(strThisString, out singleReturn) ? singleReturn : singleDefault;
-        }
-
+        
         /// <summary>
         /// Converts and returns this string's value as Single.
         /// The default value passed in is returned if the string does not successfully parse to Single.
         /// </summary>
         /// <returns>This string converted to Single, or the default value if conversion unsuccessful.</returns>
-        public static Single ToSingle(this string strThisString, Single singleDefault = default(Single))
+        public static Single ToSingleOrDefault(this string strThisString, Single singleDefault = default(Single))
         {
             Single singleReturn;
             return Single.TryParse(strThisString, out singleReturn) ? singleReturn : singleDefault;

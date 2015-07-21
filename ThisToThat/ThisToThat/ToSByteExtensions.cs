@@ -9,24 +9,6 @@ namespace ThisToThat
     {
 
         /// <summary>
-        /// Converts this Byte to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This Byte converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Byte
-        /// Min value: 0
-        /// Max value: 255
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte ToSByte(this Byte thisByte)
-        {
-            return thisByte.ToSByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Byte to SByte or returns the specified default value
         /// </summary>
         /// <returns>This Byte converted to SByte</returns>
@@ -60,24 +42,6 @@ namespace ThisToThat
         public static SByte? ToSByteNullable(this Byte thisByte)
         {
             return (thisByte > (byte)127) ? (SByte?)null : (SByte)thisByte;
-        }
-
-        /// <summary>
-        /// Converts this Int16 to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This Int16 converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte ToSByte(this Int16 thisInt16)
-        {
-            return thisInt16.ToSByteNullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -117,24 +81,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this UInt16 to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This UInt16 converted to SByte</returns>
-        /// <remarks>
-        /// Source type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte ToSByte(this UInt16 thisUInt16)
-        {
-            return thisUInt16.ToSByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this UInt16 to SByte or returns the specified default value
         /// </summary>
         /// <returns>This UInt16 converted to SByte</returns>
@@ -168,24 +114,6 @@ namespace ThisToThat
         public static SByte? ToSByteNullable(this UInt16 thisUInt16)
         {
             return (thisUInt16 > (ushort)127) ? (SByte?)null : (SByte)thisUInt16;
-        }
-
-        /// <summary>
-        /// Converts this Int32 to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This Int32 converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Int32
-        /// Min value: -2147483648
-        /// Max value: 2147483647
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte ToSByte(this Int32 thisInt32)
-        {
-            return thisInt32.ToSByteNullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -225,24 +153,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this UInt32 to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This UInt32 converted to SByte</returns>
-        /// <remarks>
-        /// Source type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte ToSByte(this UInt32 thisUInt32)
-        {
-            return thisUInt32.ToSByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this UInt32 to SByte or returns the specified default value
         /// </summary>
         /// <returns>This UInt32 converted to SByte</returns>
@@ -279,24 +189,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this Int64 to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This Int64 converted to SByte</returns>
-        /// <remarks>
-        /// Source type: Int64
-        /// Min value: -9223372036854775808
-        /// Max value: 9223372036854775807
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte ToSByte(this Int64 thisInt64)
-        {
-            return thisInt64.ToSByteNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Int64 to SByte or returns the specified default value
         /// </summary>
         /// <returns>This Int64 converted to SByte</returns>
@@ -330,24 +222,6 @@ namespace ThisToThat
         public static SByte? ToSByteNullable(this Int64 thisInt64)
         {
             return (thisInt64 < -128L || thisInt64 > 127L) ? (SByte?)null : (SByte)thisInt64;
-        }
-
-        /// <summary>
-        /// Converts this UInt64 to SByte or returns the SByte default value
-        /// </summary>
-        /// <returns>This UInt64 converted to SByte</returns>
-        /// <remarks>
-        /// Source type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        ///
-        /// Target type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        /// </remarks>
-        public static SByte ToSByte(this UInt64 thisUInt64)
-        {
-            return thisUInt64.ToSByteNullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -414,25 +288,13 @@ namespace ThisToThat
             SByte sbyteReturn;
             return SByte.TryParse(strThisString, out sbyteReturn) ? sbyteReturn : (SByte?)null;
         }
-
-        /// <summary>
-        /// Converts and returns this string's value as SByte.
-        /// The default value passed in is returned if the string does not successfully parse to SByte.
-        /// </summary>
-        /// <param name="intDefault">Value to return if this string does not parse to SByte.</param>
-        /// <returns>This string converted to SByte, or the default value if conversion unsuccessful.</returns>
-        public static SByte ToSByteOrDefault(this string strThisString, SByte sbyteDefault)
-        {
-            SByte sbyteReturn;
-            return SByte.TryParse(strThisString, out sbyteReturn) ? sbyteReturn : sbyteDefault;
-        }
-
+        
         /// <summary>
         /// Converts and returns this string's value as SByte.
         /// The default value passed in is returned if the string does not successfully parse to SByte.
         /// </summary>
         /// <returns>This string converted to SByte, or the default value if conversion unsuccessful.</returns>
-        public static SByte ToSByte(this string strThisString, SByte sbyteDefault = default(SByte))
+        public static SByte ToSByteOrDefault(this string strThisString, SByte sbyteDefault = default(SByte))
         {
             SByte sbyteReturn;
             return SByte.TryParse(strThisString, out sbyteReturn) ? sbyteReturn : sbyteDefault;

@@ -306,12 +306,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42UL, result42);
             
             // Test conversion of target type maximum value
-            UInt64 resultMax = "0".ToUInt64OrDefault();
-            Assert.AreEqual(0UL, resultMax);
+            UInt64 resultMax = "18446744073709551615".ToUInt64OrDefault();
+            Assert.AreEqual(18446744073709551615UL, resultMax);
 
             // Test conversion of "foo"
             UInt64 resultFoo = "foo".ToUInt64OrDefault(86UL);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual(86UL, resultFoo);
 
         }
 
@@ -330,12 +330,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42UL, result42);
             
             // Test conversion of target type maximum value
-            UInt64? resultMax = "0".ToUInt64Nullable();
-            Assert.AreEqual(0UL, resultMax);
+            UInt64? resultMax = "18446744073709551615".ToUInt64Nullable();
+            Assert.AreEqual(18446744073709551615UL, resultMax);
 
             // Test conversion of "foo"
             UInt64? resultFoo = "foo".ToUInt64Nullable();
-            Assert.AreEqual(86UL, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

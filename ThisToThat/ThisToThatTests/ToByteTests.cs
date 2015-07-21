@@ -480,12 +480,12 @@ namespace ThisToThatTests
             Assert.AreEqual((byte)42, result42);
             
             // Test conversion of target type maximum value
-            Byte resultMax = "0".ToByteOrDefault();
-            Assert.AreEqual((byte)0, resultMax);
+            Byte resultMax = "255".ToByteOrDefault();
+            Assert.AreEqual((byte)255, resultMax);
 
             // Test conversion of "foo"
             Byte resultFoo = "foo".ToByteOrDefault((byte)86);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual((byte)86, resultFoo);
 
         }
 
@@ -504,12 +504,12 @@ namespace ThisToThatTests
             Assert.AreEqual((byte)42, result42);
             
             // Test conversion of target type maximum value
-            Byte? resultMax = "0".ToByteNullable();
-            Assert.AreEqual((byte)0, resultMax);
+            Byte? resultMax = "255".ToByteNullable();
+            Assert.AreEqual((byte)255, resultMax);
 
             // Test conversion of "foo"
             Byte? resultFoo = "foo".ToByteNullable();
-            Assert.AreEqual((byte)86, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

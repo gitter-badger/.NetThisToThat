@@ -39,24 +39,6 @@ namespace ThisToThat
         */
 
         /// <summary>
-        /// Converts this UInt64 to Int64 or returns the Int64 default value
-        /// </summary>
-        /// <returns>This UInt64 converted to Int64</returns>
-        /// <remarks>
-        /// Source type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        ///
-        /// Target type: Int64
-        /// Min value: -9223372036854775808
-        /// Max value: 9223372036854775807
-        /// </remarks>
-        public static Int64 ToInt64(this UInt64 thisUInt64)
-        {
-            return thisUInt64.ToInt64Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this UInt64 to Int64 or returns the specified default value
         /// </summary>
         /// <returns>This UInt64 converted to Int64</returns>
@@ -120,25 +102,13 @@ namespace ThisToThat
             Int64 int64Return;
             return Int64.TryParse(strThisString, out int64Return) ? int64Return : (Int64?)null;
         }
-
-        /// <summary>
-        /// Converts and returns this string's value as Int64.
-        /// The default value passed in is returned if the string does not successfully parse to Int64.
-        /// </summary>
-        /// <param name="intDefault">Value to return if this string does not parse to Int64.</param>
-        /// <returns>This string converted to Int64, or the default value if conversion unsuccessful.</returns>
-        public static Int64 ToInt64OrDefault(this string strThisString, Int64 int64Default)
-        {
-            Int64 int64Return;
-            return Int64.TryParse(strThisString, out int64Return) ? int64Return : int64Default;
-        }
-
+        
         /// <summary>
         /// Converts and returns this string's value as Int64.
         /// The default value passed in is returned if the string does not successfully parse to Int64.
         /// </summary>
         /// <returns>This string converted to Int64, or the default value if conversion unsuccessful.</returns>
-        public static Int64 ToInt64(this string strThisString, Int64 int64Default = default(Int64))
+        public static Int64 ToInt64OrDefault(this string strThisString, Int64 int64Default = default(Int64))
         {
             Int64 int64Return;
             return Int64.TryParse(strThisString, out int64Return) ? int64Return : int64Default;

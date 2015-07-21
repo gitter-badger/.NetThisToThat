@@ -479,12 +479,12 @@ namespace ThisToThatTests
             Assert.AreEqual((sbyte)42, result42);
             
             // Test conversion of target type maximum value
-            SByte resultMax = "-128".ToSByteOrDefault();
-            Assert.AreEqual((sbyte)-128, resultMax);
+            SByte resultMax = "127".ToSByteOrDefault();
+            Assert.AreEqual((sbyte)127, resultMax);
 
             // Test conversion of "foo"
             SByte resultFoo = "foo".ToSByteOrDefault((sbyte)86);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual((sbyte)86, resultFoo);
 
         }
 
@@ -503,12 +503,12 @@ namespace ThisToThatTests
             Assert.AreEqual((sbyte)42, result42);
             
             // Test conversion of target type maximum value
-            SByte? resultMax = "-128".ToSByteNullable();
-            Assert.AreEqual((sbyte)-128, resultMax);
+            SByte? resultMax = "127".ToSByteNullable();
+            Assert.AreEqual((sbyte)127, resultMax);
 
             // Test conversion of "foo"
             SByte? resultFoo = "foo".ToSByteNullable();
-            Assert.AreEqual((sbyte)86, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

@@ -63,7 +63,7 @@ namespace ThisToThatTests
             Single? result = source.ToSingleOrDefault(86f);
     
             // Here we would expect this conversion to fail (and return the default value of 86f), 
-            // since the source type's minimum value (-1.79769313486232E+308) is less than the target type's minimum value (-3.402823E+38).
+            // since the source type's minimum value (-1.7976931348623157E+308) is less than the target type's minimum value (-3.40282347E+38).
             Assert.AreEqual(86f, result);
             Assert.IsInstanceOfType(result, typeof(Single));
             // Test conversion of source type value 42 to target type
@@ -78,7 +78,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Double));
             result = source.ToSingleOrDefault(86f);
             // Here we would expect this conversion to fail (and return the default value of 86f), 
-            // since the source type's maximum value (1.79769313486232E+308) is greater than the target type's maximum value (3.402823E+38).
+            // since the source type's maximum value (1.7976931348623157E+308) is greater than the target type's maximum value (3.40282347E+38).
             Assert.AreEqual(86f, result);
             Assert.IsInstanceOfType(result, typeof(Single));
         }
@@ -95,7 +95,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Double));
             Single? result = source.ToSingleNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's minimum value (-1.79769313486232E+308) is less than the target type's minimum value (-3.402823E+38).
+            // since the source type's minimum value (-1.7976931348623157E+308) is less than the target type's minimum value (-3.40282347E+38).
             Assert.IsNull(result);
 
             // Test conversion of source type value 42 to target type
@@ -110,7 +110,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Double));
             result = source.ToSingleNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's maximum value (1.79769313486232E+308) is greater than the target type's maximum value (3.402823E+38).
+            // since the source type's maximum value (1.7976931348623157E+308) is greater than the target type's maximum value (3.40282347E+38).
             Assert.IsNull(result);
         }
 
@@ -131,20 +131,20 @@ namespace ThisToThatTests
         public void TestStringToSingleOrDefault()
         {
             // Test conversion of target type minimum value
-            Single resultMin = "-3.402823E+38".ToSingleOrDefault();
-            Assert.AreEqual(-3.402823E+38f, resultMin);
+            Single resultMin = "-3.40282347E+38".ToSingleOrDefault();
+            Assert.AreEqual(-3.40282347E+38f, resultMin);
 
             // Test conversion of fixed value (42)
             Single result42 = "42".ToSingleOrDefault();
             Assert.AreEqual(42f, result42);
             
             // Test conversion of target type maximum value
-            Single resultMax = "-3.402823E+38".ToSingleOrDefault();
-            Assert.AreEqual(-3.402823E+38f, resultMax);
+            Single resultMax = "3.40282347E+38".ToSingleOrDefault();
+            Assert.AreEqual(3.40282347E+38f, resultMax);
 
             // Test conversion of "foo"
             Single resultFoo = "foo".ToSingleOrDefault(86f);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual(86f, resultFoo);
 
         }
 
@@ -155,20 +155,20 @@ namespace ThisToThatTests
         public void TestStringToSingleNullable()
         {
             // Test conversion of target type minimum value
-            Single? resultMin = "-3.402823E+38".ToSingleNullable();
-            Assert.AreEqual(-3.402823E+38f, resultMin);
+            Single? resultMin = "-3.40282347E+38".ToSingleNullable();
+            Assert.AreEqual(-3.40282347E+38f, resultMin);
 
             // Test conversion of fixed value (42)
             Single? result42 = "42".ToSingleNullable();
             Assert.AreEqual(42f, result42);
             
             // Test conversion of target type maximum value
-            Single? resultMax = "-3.402823E+38".ToSingleNullable();
-            Assert.AreEqual(-3.402823E+38f, resultMax);
+            Single? resultMax = "3.40282347E+38".ToSingleNullable();
+            Assert.AreEqual(3.40282347E+38f, resultMax);
 
             // Test conversion of "foo"
             Single? resultFoo = "foo".ToSingleNullable();
-            Assert.AreEqual(86f, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

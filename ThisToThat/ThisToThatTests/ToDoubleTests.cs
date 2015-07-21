@@ -72,20 +72,20 @@ namespace ThisToThatTests
         public void TestStringToDoubleOrDefault()
         {
             // Test conversion of target type minimum value
-            Double resultMin = "-1.79769313486232E+308".ToDoubleOrDefault();
-            Assert.AreEqual(-1.79769313486232E+308d, resultMin);
+            Double resultMin = "-1.7976931348623157E+308".ToDoubleOrDefault();
+            Assert.AreEqual(-1.7976931348623157E+308d, resultMin);
 
             // Test conversion of fixed value (42)
             Double result42 = "42".ToDoubleOrDefault();
             Assert.AreEqual(42d, result42);
             
             // Test conversion of target type maximum value
-            Double resultMax = "-1.79769313486232E+308".ToDoubleOrDefault();
-            Assert.AreEqual(-1.79769313486232E+308d, resultMax);
+            Double resultMax = "1.7976931348623157E+308".ToDoubleOrDefault();
+            Assert.AreEqual(1.7976931348623157E+308d, resultMax);
 
             // Test conversion of "foo"
             Double resultFoo = "foo".ToDoubleOrDefault(86d);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual(86d, resultFoo);
 
         }
 
@@ -96,20 +96,20 @@ namespace ThisToThatTests
         public void TestStringToDoubleNullable()
         {
             // Test conversion of target type minimum value
-            Double? resultMin = "-1.79769313486232E+308".ToDoubleNullable();
-            Assert.AreEqual(-1.79769313486232E+308d, resultMin);
+            Double? resultMin = "-1.7976931348623157E+308".ToDoubleNullable();
+            Assert.AreEqual(-1.7976931348623157E+308d, resultMin);
 
             // Test conversion of fixed value (42)
             Double? result42 = "42".ToDoubleNullable();
             Assert.AreEqual(42d, result42);
             
             // Test conversion of target type maximum value
-            Double? resultMax = "-1.79769313486232E+308".ToDoubleNullable();
-            Assert.AreEqual(-1.79769313486232E+308d, resultMax);
+            Double? resultMax = "1.7976931348623157E+308".ToDoubleNullable();
+            Assert.AreEqual(1.7976931348623157E+308d, resultMax);
 
             // Test conversion of "foo"
             Double? resultFoo = "foo".ToDoubleNullable();
-            Assert.AreEqual(86d, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

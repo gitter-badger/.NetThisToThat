@@ -422,12 +422,12 @@ namespace ThisToThatTests
             Assert.AreEqual((ushort)42, result42);
             
             // Test conversion of target type maximum value
-            UInt16 resultMax = "0".ToUInt16OrDefault();
-            Assert.AreEqual((ushort)0, resultMax);
+            UInt16 resultMax = "65535".ToUInt16OrDefault();
+            Assert.AreEqual((ushort)65535, resultMax);
 
             // Test conversion of "foo"
             UInt16 resultFoo = "foo".ToUInt16OrDefault((ushort)86);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual((ushort)86, resultFoo);
 
         }
 
@@ -446,12 +446,12 @@ namespace ThisToThatTests
             Assert.AreEqual((ushort)42, result42);
             
             // Test conversion of target type maximum value
-            UInt16? resultMax = "0".ToUInt16Nullable();
-            Assert.AreEqual((ushort)0, resultMax);
+            UInt16? resultMax = "65535".ToUInt16Nullable();
+            Assert.AreEqual((ushort)65535, resultMax);
 
             // Test conversion of "foo"
             UInt16? resultFoo = "foo".ToUInt16Nullable();
-            Assert.AreEqual((ushort)86, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

@@ -9,24 +9,6 @@ namespace ThisToThat
     {
 
         /// <summary>
-        /// Converts this SByte to UInt32 or returns the UInt32 default value
-        /// </summary>
-        /// <returns>This SByte converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32 ToUInt32(this SByte thisSByte)
-        {
-            return thisSByte.ToUInt32Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this SByte to UInt32 or returns the specified default value
         /// </summary>
         /// <returns>This SByte converted to UInt32</returns>
@@ -66,24 +48,6 @@ namespace ThisToThat
         Byte to UInt32: Method omitted
         There is a predefined implicit conversion from Byte to UInt32
         */
-
-        /// <summary>
-        /// Converts this Int16 to UInt32 or returns the UInt32 default value
-        /// </summary>
-        /// <returns>This Int16 converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32 ToUInt32(this Int16 thisInt16)
-        {
-            return thisInt16.ToUInt32Nullable().GetValueOrDefault();
-        }
 
         /// <summary>
         /// Converts this Int16 to UInt32 or returns the specified default value
@@ -127,24 +91,6 @@ namespace ThisToThat
         */
 
         /// <summary>
-        /// Converts this Int32 to UInt32 or returns the UInt32 default value
-        /// </summary>
-        /// <returns>This Int32 converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Int32
-        /// Min value: -2147483648
-        /// Max value: 2147483647
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32 ToUInt32(this Int32 thisInt32)
-        {
-            return thisInt32.ToUInt32Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Int32 to UInt32 or returns the specified default value
         /// </summary>
         /// <returns>This Int32 converted to UInt32</returns>
@@ -181,24 +127,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this Int64 to UInt32 or returns the UInt32 default value
-        /// </summary>
-        /// <returns>This Int64 converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: Int64
-        /// Min value: -9223372036854775808
-        /// Max value: 9223372036854775807
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32 ToUInt32(this Int64 thisInt64)
-        {
-            return thisInt64.ToUInt32Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Int64 to UInt32 or returns the specified default value
         /// </summary>
         /// <returns>This Int64 converted to UInt32</returns>
@@ -232,24 +160,6 @@ namespace ThisToThat
         public static UInt32? ToUInt32Nullable(this Int64 thisInt64)
         {
             return (thisInt64 < 0L || thisInt64 > 4294967295L) ? (UInt32?)null : (UInt32)thisInt64;
-        }
-
-        /// <summary>
-        /// Converts this UInt64 to UInt32 or returns the UInt32 default value
-        /// </summary>
-        /// <returns>This UInt64 converted to UInt32</returns>
-        /// <remarks>
-        /// Source type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        ///
-        /// Target type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        /// </remarks>
-        public static UInt32 ToUInt32(this UInt64 thisUInt64)
-        {
-            return thisUInt64.ToUInt32Nullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -316,25 +226,13 @@ namespace ThisToThat
             UInt32 uint32Return;
             return UInt32.TryParse(strThisString, out uint32Return) ? uint32Return : (UInt32?)null;
         }
-
-        /// <summary>
-        /// Converts and returns this string's value as UInt32.
-        /// The default value passed in is returned if the string does not successfully parse to UInt32.
-        /// </summary>
-        /// <param name="intDefault">Value to return if this string does not parse to UInt32.</param>
-        /// <returns>This string converted to UInt32, or the default value if conversion unsuccessful.</returns>
-        public static UInt32 ToUInt32OrDefault(this string strThisString, UInt32 uint32Default)
-        {
-            UInt32 uint32Return;
-            return UInt32.TryParse(strThisString, out uint32Return) ? uint32Return : uint32Default;
-        }
-
+        
         /// <summary>
         /// Converts and returns this string's value as UInt32.
         /// The default value passed in is returned if the string does not successfully parse to UInt32.
         /// </summary>
         /// <returns>This string converted to UInt32, or the default value if conversion unsuccessful.</returns>
-        public static UInt32 ToUInt32(this string strThisString, UInt32 uint32Default = default(UInt32))
+        public static UInt32 ToUInt32OrDefault(this string strThisString, UInt32 uint32Default = default(UInt32))
         {
             UInt32 uint32Return;
             return UInt32.TryParse(strThisString, out uint32Return) ? uint32Return : uint32Default;

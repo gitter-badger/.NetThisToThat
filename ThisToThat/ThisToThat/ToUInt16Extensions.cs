@@ -9,24 +9,6 @@ namespace ThisToThat
     {
 
         /// <summary>
-        /// Converts this SByte to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This SByte converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: SByte
-        /// Min value: -128
-        /// Max value: 127
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16 ToUInt16(this SByte thisSByte)
-        {
-            return thisSByte.ToUInt16Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this SByte to UInt16 or returns the specified default value
         /// </summary>
         /// <returns>This SByte converted to UInt16</returns>
@@ -68,24 +50,6 @@ namespace ThisToThat
         */
 
         /// <summary>
-        /// Converts this Int16 to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This Int16 converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Int16
-        /// Min value: -32768
-        /// Max value: 32767
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16 ToUInt16(this Int16 thisInt16)
-        {
-            return thisInt16.ToUInt16Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Int16 to UInt16 or returns the specified default value
         /// </summary>
         /// <returns>This Int16 converted to UInt16</returns>
@@ -119,24 +83,6 @@ namespace ThisToThat
         public static UInt16? ToUInt16Nullable(this Int16 thisInt16)
         {
             return (thisInt16 < (short)0) ? (UInt16?)null : (UInt16)thisInt16;
-        }
-
-        /// <summary>
-        /// Converts this Int32 to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This Int32 converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Int32
-        /// Min value: -2147483648
-        /// Max value: 2147483647
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16 ToUInt16(this Int32 thisInt32)
-        {
-            return thisInt32.ToUInt16Nullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -176,24 +122,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this UInt32 to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This UInt32 converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: UInt32
-        /// Min value: 0
-        /// Max value: 4294967295
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16 ToUInt16(this UInt32 thisUInt32)
-        {
-            return thisUInt32.ToUInt16Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this UInt32 to UInt16 or returns the specified default value
         /// </summary>
         /// <returns>This UInt32 converted to UInt16</returns>
@@ -230,24 +158,6 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this Int64 to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This Int64 converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: Int64
-        /// Min value: -9223372036854775808
-        /// Max value: 9223372036854775807
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16 ToUInt16(this Int64 thisInt64)
-        {
-            return thisInt64.ToUInt16Nullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Int64 to UInt16 or returns the specified default value
         /// </summary>
         /// <returns>This Int64 converted to UInt16</returns>
@@ -281,24 +191,6 @@ namespace ThisToThat
         public static UInt16? ToUInt16Nullable(this Int64 thisInt64)
         {
             return (thisInt64 < 0L || thisInt64 > 65535L) ? (UInt16?)null : (UInt16)thisInt64;
-        }
-
-        /// <summary>
-        /// Converts this UInt64 to UInt16 or returns the UInt16 default value
-        /// </summary>
-        /// <returns>This UInt64 converted to UInt16</returns>
-        /// <remarks>
-        /// Source type: UInt64
-        /// Min value: 0
-        /// Max value: 18446744073709551615
-        ///
-        /// Target type: UInt16
-        /// Min value: 0
-        /// Max value: 65535
-        /// </remarks>
-        public static UInt16 ToUInt16(this UInt64 thisUInt64)
-        {
-            return thisUInt64.ToUInt16Nullable().GetValueOrDefault();
         }
 
         /// <summary>
@@ -365,25 +257,13 @@ namespace ThisToThat
             UInt16 uint16Return;
             return UInt16.TryParse(strThisString, out uint16Return) ? uint16Return : (UInt16?)null;
         }
-
-        /// <summary>
-        /// Converts and returns this string's value as UInt16.
-        /// The default value passed in is returned if the string does not successfully parse to UInt16.
-        /// </summary>
-        /// <param name="intDefault">Value to return if this string does not parse to UInt16.</param>
-        /// <returns>This string converted to UInt16, or the default value if conversion unsuccessful.</returns>
-        public static UInt16 ToUInt16OrDefault(this string strThisString, UInt16 uint16Default)
-        {
-            UInt16 uint16Return;
-            return UInt16.TryParse(strThisString, out uint16Return) ? uint16Return : uint16Default;
-        }
-
+        
         /// <summary>
         /// Converts and returns this string's value as UInt16.
         /// The default value passed in is returned if the string does not successfully parse to UInt16.
         /// </summary>
         /// <returns>This string converted to UInt16, or the default value if conversion unsuccessful.</returns>
-        public static UInt16 ToUInt16(this string strThisString, UInt16 uint16Default = default(UInt16))
+        public static UInt16 ToUInt16OrDefault(this string strThisString, UInt16 uint16Default = default(UInt16))
         {
             UInt16 uint16Return;
             return UInt16.TryParse(strThisString, out uint16Return) ? uint16Return : uint16Default;

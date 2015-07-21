@@ -134,12 +134,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42L, result42);
             
             // Test conversion of target type maximum value
-            Int64 resultMax = "-9223372036854775808".ToInt64OrDefault();
-            Assert.AreEqual(-9223372036854775808L, resultMax);
+            Int64 resultMax = "9223372036854775807".ToInt64OrDefault();
+            Assert.AreEqual(9223372036854775807L, resultMax);
 
             // Test conversion of "foo"
             Int64 resultFoo = "foo".ToInt64OrDefault(86L);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual(86L, resultFoo);
 
         }
 
@@ -158,12 +158,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42L, result42);
             
             // Test conversion of target type maximum value
-            Int64? resultMax = "-9223372036854775808".ToInt64Nullable();
-            Assert.AreEqual(-9223372036854775808L, resultMax);
+            Int64? resultMax = "9223372036854775807".ToInt64Nullable();
+            Assert.AreEqual(9223372036854775807L, resultMax);
 
             // Test conversion of "foo"
             Int64? resultFoo = "foo".ToInt64Nullable();
-            Assert.AreEqual(86L, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

@@ -49,31 +49,13 @@ namespace ThisToThat
         */
 
         /// <summary>
-        /// Converts this Single to Decimal or returns the Decimal default value
-        /// </summary>
-        /// <returns>This Single converted to Decimal</returns>
-        /// <remarks>
-        /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
-        ///
-        /// Target type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        /// </remarks>
-        public static Decimal ToDecimal(this Single thisSingle)
-        {
-            return thisSingle.ToDecimalNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Single to Decimal or returns the specified default value
         /// </summary>
         /// <returns>This Single converted to Decimal</returns>
         /// <remarks>
         /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
+        /// Min value: -3.40282347E+38
+        /// Max value: 3.40282347E+38
         ///
         /// Target type: Decimal
         /// Min value: -79228162514264337593543950335
@@ -90,8 +72,8 @@ namespace ThisToThat
         /// <returns>This Single converted to Decimal</returns>
         /// <remarks>
         /// Source type: Single
-        /// Min value: -3.402823E+38
-        /// Max value: 3.402823E+38
+        /// Min value: -3.40282347E+38
+        /// Max value: 3.40282347E+38
         ///
         /// Target type: Decimal
         /// Min value: -79228162514264337593543950335
@@ -103,31 +85,13 @@ namespace ThisToThat
         }
 
         /// <summary>
-        /// Converts this Double to Decimal or returns the Decimal default value
-        /// </summary>
-        /// <returns>This Double converted to Decimal</returns>
-        /// <remarks>
-        /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
-        ///
-        /// Target type: Decimal
-        /// Min value: -79228162514264337593543950335
-        /// Max value: 79228162514264337593543950335
-        /// </remarks>
-        public static Decimal ToDecimal(this Double thisDouble)
-        {
-            return thisDouble.ToDecimalNullable().GetValueOrDefault();
-        }
-
-        /// <summary>
         /// Converts this Double to Decimal or returns the specified default value
         /// </summary>
         /// <returns>This Double converted to Decimal</returns>
         /// <remarks>
         /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
+        /// Min value: -1.7976931348623157E+308
+        /// Max value: 1.7976931348623157E+308
         ///
         /// Target type: Decimal
         /// Min value: -79228162514264337593543950335
@@ -144,8 +108,8 @@ namespace ThisToThat
         /// <returns>This Double converted to Decimal</returns>
         /// <remarks>
         /// Source type: Double
-        /// Min value: -1.79769313486232E+308
-        /// Max value: 1.79769313486232E+308
+        /// Min value: -1.7976931348623157E+308
+        /// Max value: 1.7976931348623157E+308
         ///
         /// Target type: Decimal
         /// Min value: -79228162514264337593543950335
@@ -166,25 +130,13 @@ namespace ThisToThat
             Decimal decimalReturn;
             return Decimal.TryParse(strThisString, out decimalReturn) ? decimalReturn : (Decimal?)null;
         }
-
-        /// <summary>
-        /// Converts and returns this string's value as Decimal.
-        /// The default value passed in is returned if the string does not successfully parse to Decimal.
-        /// </summary>
-        /// <param name="intDefault">Value to return if this string does not parse to Decimal.</param>
-        /// <returns>This string converted to Decimal, or the default value if conversion unsuccessful.</returns>
-        public static Decimal ToDecimalOrDefault(this string strThisString, Decimal decimalDefault)
-        {
-            Decimal decimalReturn;
-            return Decimal.TryParse(strThisString, out decimalReturn) ? decimalReturn : decimalDefault;
-        }
-
+        
         /// <summary>
         /// Converts and returns this string's value as Decimal.
         /// The default value passed in is returned if the string does not successfully parse to Decimal.
         /// </summary>
         /// <returns>This string converted to Decimal, or the default value if conversion unsuccessful.</returns>
-        public static Decimal ToDecimal(this string strThisString, Decimal decimalDefault = default(Decimal))
+        public static Decimal ToDecimalOrDefault(this string strThisString, Decimal decimalDefault = default(Decimal))
         {
             Decimal decimalReturn;
             return Decimal.TryParse(strThisString, out decimalReturn) ? decimalReturn : decimalDefault;

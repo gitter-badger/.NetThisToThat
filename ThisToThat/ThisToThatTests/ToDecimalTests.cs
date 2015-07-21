@@ -63,7 +63,7 @@ namespace ThisToThatTests
             Decimal? result = source.ToDecimalOrDefault(86m);
     
             // Here we would expect this conversion to fail (and return the default value of 86m), 
-            // since the source type's minimum value (-3.402823E+38) is less than the target type's minimum value (-79228162514264337593543950335).
+            // since the source type's minimum value (-3.40282347E+38) is less than the target type's minimum value (-79228162514264337593543950335).
             Assert.AreEqual(86m, result);
             Assert.IsInstanceOfType(result, typeof(Decimal));
             // Test conversion of source type value 42 to target type
@@ -78,7 +78,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Single));
             result = source.ToDecimalOrDefault(86m);
             // Here we would expect this conversion to fail (and return the default value of 86m), 
-            // since the source type's maximum value (3.402823E+38) is greater than the target type's maximum value (79228162514264337593543950335).
+            // since the source type's maximum value (3.40282347E+38) is greater than the target type's maximum value (79228162514264337593543950335).
             Assert.AreEqual(86m, result);
             Assert.IsInstanceOfType(result, typeof(Decimal));
         }
@@ -95,7 +95,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Single));
             Decimal? result = source.ToDecimalNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's minimum value (-3.402823E+38) is less than the target type's minimum value (-79228162514264337593543950335).
+            // since the source type's minimum value (-3.40282347E+38) is less than the target type's minimum value (-79228162514264337593543950335).
             Assert.IsNull(result);
 
             // Test conversion of source type value 42 to target type
@@ -110,7 +110,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Single));
             result = source.ToDecimalNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's maximum value (3.402823E+38) is greater than the target type's maximum value (79228162514264337593543950335).
+            // since the source type's maximum value (3.40282347E+38) is greater than the target type's maximum value (79228162514264337593543950335).
             Assert.IsNull(result);
         }
 
@@ -127,7 +127,7 @@ namespace ThisToThatTests
             Decimal? result = source.ToDecimalOrDefault(86m);
     
             // Here we would expect this conversion to fail (and return the default value of 86m), 
-            // since the source type's minimum value (-1.79769313486232E+308) is less than the target type's minimum value (-79228162514264337593543950335).
+            // since the source type's minimum value (-1.7976931348623157E+308) is less than the target type's minimum value (-79228162514264337593543950335).
             Assert.AreEqual(86m, result);
             Assert.IsInstanceOfType(result, typeof(Decimal));
             // Test conversion of source type value 42 to target type
@@ -142,7 +142,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Double));
             result = source.ToDecimalOrDefault(86m);
             // Here we would expect this conversion to fail (and return the default value of 86m), 
-            // since the source type's maximum value (1.79769313486232E+308) is greater than the target type's maximum value (79228162514264337593543950335).
+            // since the source type's maximum value (1.7976931348623157E+308) is greater than the target type's maximum value (79228162514264337593543950335).
             Assert.AreEqual(86m, result);
             Assert.IsInstanceOfType(result, typeof(Decimal));
         }
@@ -159,7 +159,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Double));
             Decimal? result = source.ToDecimalNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's minimum value (-1.79769313486232E+308) is less than the target type's minimum value (-79228162514264337593543950335).
+            // since the source type's minimum value (-1.7976931348623157E+308) is less than the target type's minimum value (-79228162514264337593543950335).
             Assert.IsNull(result);
 
             // Test conversion of source type value 42 to target type
@@ -174,7 +174,7 @@ namespace ThisToThatTests
             Assert.IsInstanceOfType(source, typeof(Double));
             result = source.ToDecimalNullable();
             // Here we would expect this conversion to fail (and return null), 
-            // since the source type's maximum value (1.79769313486232E+308) is greater than the target type's maximum value (79228162514264337593543950335).
+            // since the source type's maximum value (1.7976931348623157E+308) is greater than the target type's maximum value (79228162514264337593543950335).
             Assert.IsNull(result);
         }
 
@@ -193,12 +193,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42m, result42);
             
             // Test conversion of target type maximum value
-            Decimal resultMax = "-79228162514264337593543950335".ToDecimalOrDefault();
-            Assert.AreEqual(-79228162514264337593543950335m, resultMax);
+            Decimal resultMax = "79228162514264337593543950335".ToDecimalOrDefault();
+            Assert.AreEqual(79228162514264337593543950335m, resultMax);
 
             // Test conversion of "foo"
             Decimal resultFoo = "foo".ToDecimalOrDefault(86m);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual(86m, resultFoo);
 
         }
 
@@ -217,12 +217,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42m, result42);
             
             // Test conversion of target type maximum value
-            Decimal? resultMax = "-79228162514264337593543950335".ToDecimalNullable();
-            Assert.AreEqual(-79228162514264337593543950335m, resultMax);
+            Decimal? resultMax = "79228162514264337593543950335".ToDecimalNullable();
+            Assert.AreEqual(79228162514264337593543950335m, resultMax);
 
             // Test conversion of "foo"
             Decimal? resultFoo = "foo".ToDecimalNullable();
-            Assert.AreEqual(86m, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }

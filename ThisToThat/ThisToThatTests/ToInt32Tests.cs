@@ -249,12 +249,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42, result42);
             
             // Test conversion of target type maximum value
-            Int32 resultMax = "-2147483648".ToInt32OrDefault();
-            Assert.AreEqual(-2147483648, resultMax);
+            Int32 resultMax = "2147483647".ToInt32OrDefault();
+            Assert.AreEqual(2147483647, resultMax);
 
             // Test conversion of "foo"
             Int32 resultFoo = "foo".ToInt32OrDefault(86);
-            Assert.IsNull(resultFoo);
+            Assert.AreEqual(86, resultFoo);
 
         }
 
@@ -273,12 +273,12 @@ namespace ThisToThatTests
             Assert.AreEqual(42, result42);
             
             // Test conversion of target type maximum value
-            Int32? resultMax = "-2147483648".ToInt32Nullable();
-            Assert.AreEqual(-2147483648, resultMax);
+            Int32? resultMax = "2147483647".ToInt32Nullable();
+            Assert.AreEqual(2147483647, resultMax);
 
             // Test conversion of "foo"
             Int32? resultFoo = "foo".ToInt32Nullable();
-            Assert.AreEqual(86, resultFoo);
+            Assert.IsNull(resultFoo);
 
         }
     }
