@@ -49,5 +49,45 @@ namespace ThisToThat
             return returnValue;
         }
 
+
+        private static readonly char[] _TRUE_CHARS = { 'T', 'Y', '1' };
+        private static readonly char[] _FALSE_CHARS = { 'F', 'N', '0' };
+
+        /// <summary>
+        /// Converts and returns this char's value as a boolean or the specified default value.
+        /// Values which will convert to true are: 'T', 'Y', '1'
+        /// Values which will convert to false are: 'F', 'N', '0'
+        /// All other values will convert to the default specified.
+        /// </summary>
+        public static bool ToBooleanOrDefault(this char thisChar, bool defaultValue = default(bool))
+        {
+            bool returnValue = defaultValue;
+
+            if (_TRUE_CHARS.Contains(thisChar))
+                returnValue = true;
+            else if (_FALSE_CHARS.Contains(thisChar))
+                returnValue = false;
+
+            return returnValue;
+        }
+
+        /// <summary>
+        /// Converts and returns this char's value as a nullable boolean.
+        /// Values which will convert to true are: 'T', 'Y', '1'
+        /// Values which will convert to false are: 'F', 'N', '0'
+        /// All other values will convert to null.
+        /// </summary>
+        public static bool? ToBooleanNullable(this char thisChar)
+        {
+            bool? returnValue = null;
+
+            if (_TRUE_CHARS.Contains(thisChar))
+                returnValue = true;
+            else if (_FALSE_CHARS.Contains(thisChar))
+                returnValue = false;
+
+            return returnValue;
+        }
+
     }
 }
