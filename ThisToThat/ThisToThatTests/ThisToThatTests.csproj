@@ -62,6 +62,7 @@
     <Compile Include="ToUInt16Tests.cs" />
     <Compile Include="ToUInt32Tests.cs" />
     <Compile Include="ToUInt64Tests.cs" />
+    <Compile Include="ToBooleanTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ThisToThat\ThisToThat.csproj">

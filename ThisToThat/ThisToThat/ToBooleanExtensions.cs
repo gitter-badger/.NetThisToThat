@@ -50,8 +50,8 @@ namespace ThisToThat
         }
 
 
-        private static readonly char[] _TRUE_CHARS = { 'T', 'Y', '1' };
-        private static readonly char[] _FALSE_CHARS = { 'F', 'N', '0' };
+        private static readonly char[] _TRUE_CHARS = { 'T', 't', 'Y', 'y', '1' };
+        private static readonly char[] _FALSE_CHARS = { 'F', 'f', 'N', 'n', '0' };
 
         /// <summary>
         /// Converts and returns this char's value as a boolean or the specified default value.
