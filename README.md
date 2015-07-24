@@ -1,2 +1,3 @@
 # .NetThisToThat
-Simple .Net library of basic type conversion extensions.
+A simple .Net library of basic type conversion extensions.
+
