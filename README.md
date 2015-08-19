@@ -1,6 +1,8 @@
 [![McCoy Software Logo](McCoySoftware.png)](http://mccoysoftware.uk)
 
 # .NetThisToThat
+
+[![Join the chat at https://gitter.im/DanMcCoy/.NetThisToThat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DanMcCoy/.NetThisToThat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A simple .Net library of basic type conversion extensions.
 
 ### Install
